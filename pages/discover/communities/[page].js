@@ -27,19 +27,19 @@ export default function Communities({ communities, pagination, communityCategori
           `}
       </Script>
       <Head>
-        <title>Find your communities | Tìm cộng đồng của bạn - DeFi.vn</title>
+        <title>Find your communities | Tìm cộng đồng của bạn - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Find your communities | Tìm cộng đồng của bạn - DeFi.vn" />
+        <meta property="og:title" content="Find your communities | Tìm cộng đồng của bạn - OpenTechStack.com" />
         <meta property="og:description" content="Find out about many global communities, what they discuss about and notable figures in the crypto industry." />
-        <meta property="og:url" content="https://defi.vn/communities" />
+        <meta property="og:url" content="https://OpenTechStack.com/communities" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/917efcc6-7c1c-493f-7d64-eb7e85cd2c00/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/communities" />
-        <meta name="twitter:title" content="Find your communities | Tìm cộng đồng của bạn - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/communities" />
+        <meta name="twitter:title" content="Find your communities | Tìm cộng đồng của bạn - OpenTechStack.com" />
         <meta name="twitter:description" content="Find out about many global communities, what they discuss about and notable figures in the crypto industry." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/917efcc6-7c1c-493f-7d64-eb7e85cd2c00/defi" />
       </Head>

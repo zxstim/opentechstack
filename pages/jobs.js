@@ -25,20 +25,20 @@ export default function JobsListPage({jobs}) {
           `}
       </Script>
       <Head>
-        <title>Find your Web3 jobs | Tìm công việc Web3 - DeFi.vn</title>
+        <title>Find your Web3 jobs | Tìm công việc Web3 - OpenTechStack.com</title>
         <meta name="description" content="Explore our job board with thousands of Web3 jobs in various roles and locations including remote options."/>
         <meta charset="UTF-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:url" content="https://www.defi.vn/jobs" />
+        <meta property="og:url" content="https://www.OpenTechStack.com/jobs" />
         <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Find your Web3 jobs | Tìm công việc Web3 - DeFi.vn" />
+        <meta property="og:title" content="Find your Web3 jobs | Tìm công việc Web3 - OpenTechStack.com" />
         <meta property="og:description" content="Explore our job board with thousands of Web3 jobs in various roles and locations including remote options." />
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/5f58f0e7-6d1d-45b5-4090-81cc2caa7300/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/jobs" />
-        <meta name="twitter:title" content="Find your Web3 jobs | Tìm công việc Web3 - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/jobs" />
+        <meta name="twitter:title" content="Find your Web3 jobs | Tìm công việc Web3 - OpenTechStack.com" />
         <meta name="twitter:description" content="Explore our job board with thousands of Web3 jobs in various roles and locations including remote options." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/5f58f0e7-6d1d-45b5-4090-81cc2caa7300/defi" />
       </Head>

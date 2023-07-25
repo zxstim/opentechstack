@@ -36,7 +36,7 @@ export default function BuidlArbitrum(props) {
         <meta property="og:title" content="Arbitrum" key="ogtitle" />
         <meta property="og:description" content="Arbitrum" key="ogdesc" />
         <meta property="og:site_name" content="Arbitrum" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/buidl/arbitrum" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/buidl/arbitrum" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

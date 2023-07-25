@@ -27,21 +27,21 @@ export default function Investors({ investors, pagination, investorCategories })
           `}
       </Script>
       <Head>
-        <title>Global investors list | Danh sách những nhà đầu tư - DeFi.vn</title>
+        <title>Global investors list | Danh sách những nhà đầu tư - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Find out about different types of investor categories and their contact information." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Global investors list | Danh sách những nhà đầu tư - DeFi.vn" />
+        <meta property="og:title" content="Global investors list | Danh sách những nhà đầu tư - OpenTechStack.com" />
         <meta property="og:description" content="Find out about different types of investor categories and their contact information." />
-        <meta property="og:url" content="https://defi.vn/investors" />
+        <meta property="og:url" content="https://OpenTechStack.com/investors" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/6fe5a556-f28d-4f89-4b9d-f8e103ee7600/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/investors" />
-        <meta name="twitter:title" content="Global investors list | Danh sách những nhà đầu tư - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/investors" />
+        <meta name="twitter:title" content="Global investors list | Danh sách những nhà đầu tư - OpenTechStack.com" />
         <meta name="twitter:description" content="Find out about different types of investor categories and their contact information." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/6fe5a556-f28d-4f89-4b9d-f8e103ee7600/defi" />
       </Head>

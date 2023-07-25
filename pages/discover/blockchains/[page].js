@@ -27,19 +27,19 @@ export default function Blockchains({ blockchains, pagination, blockchainCategor
           `}
       </Script>
       <Head>
-        <title>Discover Blockchains | Khám phá các Blockchain - DeFi.vn</title>
+        <title>Discover Blockchains | Khám phá các Blockchain - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Discover Blockchains | Khám phá các Blockchain - DeFi.vn" />
+        <meta property="og:title" content="Discover Blockchains | Khám phá các Blockchain - OpenTechStack.com" />
         <meta property="og:description" content="Learn everything about Blockchains, their teams, investors and their ecosystem." />
-        <meta property="og:url" content="https://defi.vn/wallets" />
+        <meta property="og:url" content="https://OpenTechStack.com/wallets" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/81ca8408-15be-47c1-d0de-394725249700/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/wallets" />
-        <meta name="twitter:title" content="Discover Blockchains | Khám phá các Blockchain - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/wallets" />
+        <meta name="twitter:title" content="Discover Blockchains | Khám phá các Blockchain - OpenTechStack.com" />
         <meta name="twitter:description" content="Learn everything about Blockchains, their teams, investors and their ecosystem." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/81ca8408-15be-47c1-d0de-394725249700/defi" />
       </Head>

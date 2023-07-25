@@ -34,7 +34,7 @@ export default function CodeSolidity(props) {
         <meta property="og:title" content="Solidity" key="ogtitle" />
         <meta property="og:description" content="Solidity" key="ogdesc" />
         <meta property="og:site_name" content="Solidity" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/solidity" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/solidity" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

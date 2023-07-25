@@ -34,7 +34,7 @@ export default function CodeJavascript(props) {
         <meta property="og:title" content="Javascript" key="ogtitle" />
         <meta property="og:description" content="Javascript" key="ogdesc" />
         <meta property="og:site_name" content="Javascript" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/javascript" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/javascript" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

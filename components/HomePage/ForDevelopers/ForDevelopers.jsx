@@ -27,40 +27,26 @@ export default function ForDevelopers() {
           gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
         }}
       >
-        <Link href="/buidl">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title1")}</h3>
-          </a>
+        <Link href="/buidl" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title1")}</h3>
         </Link>
-        <Link href="/code">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title5")}</h3>
-          </a>
+        <Link href="/code" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title5")}</h3>
         </Link>
-        <Link href="/dev-tools">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title17")}</h3>
-          </a>
+        <Link href="/dev-tools" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title17")}</h3>
         </Link>
-        <Link href="/bot">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title3")}</h3>
-          </a>
+        <Link href="/bot" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title3")}</h3>
         </Link>
-        <Link href="/hackathons">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title4")}</h3>
-          </a>
+        <Link href="/hackathons" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title4")}</h3>
         </Link>
-        <Link href="/dev-guides">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title16")}</h3>
-          </a>
+        <Link href="/dev-guides" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title16")}</h3>
         </Link>
-        <Link href="/buidl-station">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title28")}</h3>
-          </a>
+        <Link href="/buidl-station" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title28")}</h3>
         </Link>
       </div>
     </>

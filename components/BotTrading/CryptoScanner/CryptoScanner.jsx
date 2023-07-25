@@ -71,7 +71,7 @@ export default function CryptoScanner() {
         <>
             <h2 id="scanner">{t('scan')}<button style={{position: "relative", left: "10px", bottom: "4px"}}>beta</button></h2>
             <p>🔗 uid: scanner</p>
-            <a href="https://buidl.defi.vn/explain-pyhash#heading-crypto-scanner">{t('explain')}</a>
+            <a href="https://buidl.OpenTechStack.com/explain-pyhash#heading-crypto-scanner">{t('explain')}</a>
             <div>🔎 <input style={{marginTop: "24px", marginBottom: "15px"}} placeholder={t('scan-search')} onChange={event => setQuery(event.target.value)}/></div>
             <table>
             <thead>

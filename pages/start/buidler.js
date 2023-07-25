@@ -37,7 +37,7 @@ export default function Buidler(props) {
         <meta property="og:site_name" content="Buidler path" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/start/buidler"
+          content="https://OpenTechStack.com/start/buidler"
           key="ogurl"
         />
       </Head>

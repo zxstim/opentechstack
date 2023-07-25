@@ -34,7 +34,7 @@ export default function CodeMove(props) {
         <meta property="og:title" content="Move" key="ogtitle" />
         <meta property="og:description" content="Move" key="ogdesc" />
         <meta property="og:site_name" content="Move" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/move" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/move" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

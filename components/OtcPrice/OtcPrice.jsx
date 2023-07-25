@@ -377,7 +377,7 @@ export default function OtcPriceComponent(props) {
 //       <>
 //         <h2 id="otc">{t('otc')}</h2>
 //         <p>🔗 uid: otc</p>
-//         <a href="https://buidl.defi.vn/explain-pyhash#heading-otc-price">{t('explain')}</a>
+//         <a href="https://buidl.OpenTechStack.com/explain-pyhash#heading-otc-price">{t('explain')}</a>
 //         <div>🔎 <input style={{marginTop: "24px", marginBottom: "15px"}} placeholder={t('otc-search')} onChange={event => setQuery(event.target.value)}/></div>
 //         <table>
 //           <thead>

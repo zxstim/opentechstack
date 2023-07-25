@@ -27,20 +27,14 @@ export default function ForProjects() {
           gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
         }}
       >
-        <Link href="/services">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title13")}</h3>
-          </a>
+        <Link href="/services" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title13")}</h3>
         </Link>
-        <Link href="/investors">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title12")}</h3>
-          </a>
+        <Link href="/investors" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title12")}</h3>
         </Link>
-        <Link href="/hiring">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title6")}</h3>
-          </a>
+        <Link href="/hiring" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title6")}</h3>
         </Link>
       </div>
     </>

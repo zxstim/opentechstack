@@ -35,7 +35,7 @@ export default function Rekt(props) {
         <meta property="og:title" content="Rekt" key="ogtitle" />
         <meta property="og:description" content="Rekt" key="ogdesc" />
         <meta property="og:site_name" content="Rekt" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/rekt" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/rekt" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

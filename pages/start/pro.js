@@ -37,7 +37,7 @@ export default function Pro(props) {
         <meta property="og:site_name" content="Pro path" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/start/pro"
+          content="https://OpenTechStack.com/start/pro"
           key="ogurl"
         />
       </Head>

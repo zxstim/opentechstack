@@ -27,19 +27,19 @@ export default function Wallets({ wallets, pagination, walletCategories }) {
           `}
       </Script>
       <Head>
-        <title>How to use Web3 Wallets | Học cách dùng Ví Web3 - DeFi.vn</title>
+        <title>How to use Web3 Wallets | Học cách dùng Ví Web3 - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="How to use Web3 Wallets | Học cách dùng Ví Web3 - DeFi.vn" />
+        <meta property="og:title" content="How to use Web3 Wallets | Học cách dùng Ví Web3 - OpenTechStack.com" />
         <meta property="og:description" content="Learn everything about web3 wallets, including setup guide, security practices, what can you use the wallets for and many more topics." />
-        <meta property="og:url" content="https://defi.vn/wallets" />
+        <meta property="og:url" content="https://OpenTechStack.com/wallets" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/93f92267-0ff6-4ef9-45c4-060ea1b95400/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/wallets" />
-        <meta name="twitter:title" content="How to use Web3 Wallets | Học cách dùng Ví Web3 - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/wallets" />
+        <meta name="twitter:title" content="How to use Web3 Wallets | Học cách dùng Ví Web3 - OpenTechStack.com" />
         <meta name="twitter:description" content="Learn everything about web3 wallets, including setup guide, security practices, what can you use the wallets for and many more topics." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/93f92267-0ff6-4ef9-45c4-060ea1b95400/defi" />
       </Head>

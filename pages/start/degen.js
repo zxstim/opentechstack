@@ -37,7 +37,7 @@ export default function Degen(props) {
         <meta property="og:site_name" content="Degen path" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/start/degen"
+          content="https://OpenTechStack.com/start/degen"
           key="ogurl"
         />
       </Head>

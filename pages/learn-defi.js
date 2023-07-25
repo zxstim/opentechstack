@@ -34,7 +34,7 @@ export default function LearnDefi() {
           key="ogdesc"
         />
         <meta property="og:site_name" content="Testing" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/testing" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/testing" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

@@ -26,21 +26,21 @@ export default function Links(props) {
           `}
       </Script>
       <Head>
-        <title>DeFi.vn - Explore everything about Web3</title>
-        <meta name="description" content="Defi.vn is a community project aiming to be an open Web3 resource hub for everyone"/>
+        <title>OpenTechStack.com - Explore everything about the modern tech stack</title>
+        <meta name="description" content="OpenTechStack.com is a community project aiming to be an open Web3 resource hub for everyone"/>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:url" content="https://www.defi.vn/links" />
+        <meta property="og:url" content="https://www.OpenTechStack.com/links" />
         <meta property="og:type" content="website"/>
-        <meta property="og:title" content="DeFi.vn - DeFi Vietnam | DeFi Việt Nam" />
-        <meta property="og:description" content="Defi.vn is a community project aiming to be an open Web3 resource hub for everyone" />
+        <meta property="og:title" content="OpenTechStack.com - DeFi Vietnam | DeFi Việt Nam" />
+        <meta property="og:description" content="OpenTechStack.com is a community project aiming to be an open Web3 resource hub for everyone" />
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/8d6a2d48-99bc-485c-4afc-239196f02200/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/links" />
-        <meta name="twitter:title" content="DeFi.vn - DeFi Vietnam | DeFi Việt Nam" />
-        <meta name="twitter:description" content="Defi.vn is a community project aiming to be an open Web3 resource hub for everyone" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/links" />
+        <meta name="twitter:title" content="OpenTechStack.com - DeFi Vietnam | DeFi Việt Nam" />
+        <meta name="twitter:description" content="OpenTechStack.com is a community project aiming to be an open Web3 resource hub for everyone" />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/8d6a2d48-99bc-485c-4afc-239196f02200/defi" />
       </Head>
       <div className="App">

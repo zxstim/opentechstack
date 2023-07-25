@@ -36,7 +36,7 @@ export default function BuidlNym(props) {
         <meta property="og:title" content="Nym" key="ogtitle" />
         <meta property="og:description" content="Nym" key="ogdesc" />
         <meta property="og:site_name" content="Nym" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/buidl/nym" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/buidl/nym" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

@@ -72,21 +72,21 @@ export default function Playground(props) {
           `}
       </Script>
       <Head>
-        <title>Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - DeFi.vn</title>
+        <title>Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Try and experience the power of Web3 with zero risk of losing money." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - DeFi.vn" />
+        <meta property="og:title" content="Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - OpenTechStack.com" />
         <meta property="og:description" content="Try and experience the power of Web3 with zero risk of losing money." key="ogdesc" />
-        <meta property="og:url" content="https://defi.vn/playground" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/playground" key="ogurl" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/367f3e41-52b9-4e72-49da-2c17111b9f00/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/playground" />
-        <meta name="twitter:title" content="Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/playground" />
+        <meta name="twitter:title" content="Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - OpenTechStack.com" />
         <meta name="twitter:description" content="Try and experience the power of Web3 with zero risk of losing money." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/367f3e41-52b9-4e72-49da-2c17111b9f00/defi" />
       </Head>

@@ -28,19 +28,19 @@ export default function DevTools(props) {
           `}
       </Script>
       <Head>
-        <title>Find your next favourite tool for development | Tìm công cụ yêu thích mới nhất của bạn - DeFi.vn</title>
+        <title>Find your next favourite tool for development | Tìm công cụ yêu thích mới nhất của bạn - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Learn how to setup trading bot | Học cách thiết lập bot trade - DeFi.vn" />
+        <meta property="og:title" content="Learn how to setup trading bot | Học cách thiết lập bot trade - OpenTechStack.com" />
         <meta property="og:description" content="Learn how to setup trading bot, from coding languages, server setup, recommendations to open source options." />
-        <meta property="og:url" content="https://defi.vn/dev-tools" />
+        <meta property="og:url" content="https://OpenTechStack.com/dev-tools" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a6d25640-36ed-4985-a8bd-0f8e1c170b00/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/dev-tools" />
-        <meta name="twitter:title" content="Learn how to setup trading bot | Học cách thiết lập bot trade - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/dev-tools" />
+        <meta name="twitter:title" content="Learn how to setup trading bot | Học cách thiết lập bot trade - OpenTechStack.com" />
         <meta name="twitter:description" content="Learn how to setup trading bot, from coding languages, server setup, recommendations to open source options." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a6d25640-36ed-4985-a8bd-0f8e1c170b00/defi" />
       </Head>

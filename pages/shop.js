@@ -27,21 +27,21 @@ export default function Shop(props) {
           `}
       </Script>
       <Head>
-        <title>DeFi Shop | Cửa hàng DeFi - DeFi.vn</title>
+        <title>DeFi Shop | Cửa hàng DeFi - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Check out the latest crypto cold wallets, merchandises and daily necessities." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="DeFi Shop | Cửa hàng DeFi - DeFi.vn" />
+        <meta property="og:title" content="DeFi Shop | Cửa hàng DeFi - OpenTechStack.com" />
         <meta property="og:description" content="Check out the latest crypto cold wallets, merchandises and daily necessities." />
-        <meta property="og:url" content="https://defi.vn/shop" />
+        <meta property="og:url" content="https://OpenTechStack.com/shop" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/1cf7e68c-4f01-47ce-c119-ff147700df00/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/shop" />
-        <meta name="twitter:title" content="DeFi Shop | Cửa hàng DeFi - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/shop" />
+        <meta name="twitter:title" content="DeFi Shop | Cửa hàng DeFi - OpenTechStack.com" />
         <meta name="twitter:description" content="Check out the latest crypto cold wallets, merchandises and daily necessities." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/1cf7e68c-4f01-47ce-c119-ff147700df00/defi" />
       </Head>

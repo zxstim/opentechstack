@@ -27,25 +27,17 @@ export default function ForEveryone() {
           gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
         }}
       >
-        <Link href="/start">
-          <a style={{ textDecoration: "none" }}>
+        <Link href="/start" style={{ textDecoration: "none"}}>
             <h3 style={buttonStyle}>{t("title21")}</h3>
-          </a>
         </Link>
-        <Link href="/buy">
-          <a style={{ textDecoration: "none" }}>
+        <Link href="/buy" style={{ textDecoration: "none"}}>
             <h3 style={buttonStyle}>{t("title7")}</h3>
-          </a>
         </Link>
-        <Link href="/shop">
-          <a style={{ textDecoration: "none" }}>
+        <Link href="/shop" style={{ textDecoration: "none"}}>
             <h3 style={buttonStyle}>{t("title24")}</h3>
-          </a>
         </Link>
-        <Link href="/discover">
-          <a style={{ textDecoration: "none" }}>
+        <Link href="/discover" style={{ textDecoration: "none"}}>
             <h3 style={buttonStyle}>{t("title19")}</h3>
-          </a>
         </Link>
         {/* <Link href="/communities">
           <a style={{ textDecoration: "none" }}>
@@ -57,30 +49,20 @@ export default function ForEveryone() {
             <h3 style={buttonStyle}>{t("title28")}</h3>
           </a>
         </Link> */}
-        <Link href="/playground">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title27")}</h3>
-          </a>
+        <Link href="/playground" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title27")}</h3>
         </Link>
-        <Link href="/jobs">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title29")}</h3>
-          </a>
+        <Link href="/jobs" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title29")}</h3>
         </Link>
-        <Link href="/reading">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title25")}</h3>
-          </a>
+        <Link href="/reading" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title25")}</h3>
         </Link>
-        <Link href="/events">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title18")}</h3>
-          </a>
+        <Link href="/events" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title18")}</h3>
         </Link>
-        <Link href="/governance">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title26")}</h3>
-          </a>
+        <Link href="/governance" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title26")}</h3>
         </Link>
         {/* <Link href="/trading">
           <a style={{ textDecoration: "none" }}>

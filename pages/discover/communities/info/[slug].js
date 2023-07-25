@@ -31,19 +31,19 @@ export default function CommunityInfoPage({ community }) {
           `}
       </Script>
       <Head>
-        <title>{`${community[0].attributes.name} - DeFi.vn`}</title>
+        <title>{`${community[0].attributes.name} - OpenTechStack.com`}</title>
         <meta charSet="utf-8" />
         <link rel="icon" href={community[0].attributes.logo.data.attributes.formats.thumbnail.url} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={`${community[0].attributes.name} - DeFi.vn`} />
+        <meta property="og:title" content={`${community[0].attributes.name} - OpenTechStack.com`} />
         <meta property="og:description" content={`Learn about ${community[0].attributes.name}`} />
-        <meta property="og:url" content={`https://www.defi.vn/${community[0].attributes.locale}/discover/communities${community[0].attributes.slug}`} />
+        <meta property="og:url" content={`https://www.OpenTechStack.com/${community[0].attributes.locale}/discover/communities${community[0].attributes.slug}`} />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={community[0].attributes.logo.data.attributes.formats.thumbnail.url} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content={`https://www.defi.vn/${community[0].attributes.locale}/discover/communities${community[0].attributes.slug}`} />
-        <meta name="twitter:title" content={`${community[0].attributes.name} - DeFi.vn`} />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content={`https://www.OpenTechStack.com/${community[0].attributes.locale}/discover/communities${community[0].attributes.slug}`} />
+        <meta name="twitter:title" content={`${community[0].attributes.name} - OpenTechStack.com`} />
         <meta name="twitter:description" content={`Learn about ${community[0].attributes.name}`} />
         <meta name="twitter:image" content={community[0].attributes.logo.data.attributes.formats.thumbnail.url} />
       </Head>

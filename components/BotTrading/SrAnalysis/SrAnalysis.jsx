@@ -23,7 +23,7 @@ export default function Sr1AnalysisComponent({ data, rowsPerPage }) {
     <>
         <h2 id="sr1">{t('sr1')}<button style={{position: "relative", left: "10px", bottom: "4px"}}>beta</button></h2>
         <p>🔗 uid: sr1</p>
-        <a href="https://buidl.defi.vn/explain-pyhash#heading-sr-analysis">{t('explain')}</a>
+        <a href="https://buidl.OpenTechStack.com/explain-pyhash#heading-sr-analysis">{t('explain')}</a>
         <div>🔎 <input style={{marginTop: "24px", marginBottom: "15px"}} placeholder={t('sr1-search')} onChange={event => setQuery(event.target.value)}/></div>
         <table>
         <thead>

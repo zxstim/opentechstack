@@ -27,19 +27,19 @@ export default function DeFiProjects({ defiProjects, pagination }) {
           `}
       </Script>
       <Head>
-        <title>Discover DeFi projects | Khám phá dự án DeFi - DeFi.vn</title>
+        <title>Discover DeFi projects | Khám phá dự án DeFi - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Discover DeFi projects | Khám phá dự án DeFi - DeFi.vn" />
+        <meta property="og:title" content="Discover DeFi projects | Khám phá dự án DeFi - OpenTechStack.com" />
         <meta property="og:description" content="Learn everything about DeFi projects, their team, investors, and what they do." />
-        <meta property="og:url" content="https://defi.vn/wallets" />
+        <meta property="og:url" content="https://OpenTechStack.com/wallets" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/4162f9b8-76c7-4d57-5b1f-fb75a337ce00/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/defi-projects" />
-        <meta name="twitter:title" content="Discover DeFi projects | Khám phá dự án DeFi - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/defi-projects" />
+        <meta name="twitter:title" content="Discover DeFi projects | Khám phá dự án DeFi - OpenTechStack.com" />
         <meta name="twitter:description" content="Learn everything about DeFi projects, their team, investors, and what they do." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/4162f9b8-76c7-4d57-5b1f-fb75a337ce00/defi" />
       </Head>

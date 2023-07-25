@@ -26,21 +26,21 @@ export default function Start(props) {
           `}
       </Script>
       <Head>
-        <title>Start your Web3 journey here! | Bắt đầu hành trình Web3 của bạn từ đây! - DeFi.vn</title>
+        <title>Start your Web3 journey here! | Bắt đầu hành trình Web3 của bạn từ đây! - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Explore different paths, skillsets, job roles that you can take on in the world of Web3." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Start your Web3 journey here! | Bắt đầu hành trình Web3 của bạn từ đây! - DeFi.vn" />
+        <meta property="og:title" content="Start your Web3 journey here! | Bắt đầu hành trình Web3 của bạn từ đây! - OpenTechStack.com" />
         <meta property="og:description" content="Explore different paths, skillsets, job roles that you can take on in the world of Web3." key="ogdesc" />
-        <meta property="og:url" content="https://defi.vn/start" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/start" key="ogurl" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/c2f5c7e9-19f5-4eab-25e8-daaa30166900/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/start" />
-        <meta name="twitter:title" content="Start your Web3 journey here! | Bắt đầu hành trình Web3 của bạn từ đây! - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/start" />
+        <meta name="twitter:title" content="Start your Web3 journey here! | Bắt đầu hành trình Web3 của bạn từ đây! - OpenTechStack.com" />
         <meta name="twitter:description" content="Explore different paths, skillsets, job roles that you can take on in the world of Web3." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/c2f5c7e9-19f5-4eab-25e8-daaa30166900/defi" />
       </Head>

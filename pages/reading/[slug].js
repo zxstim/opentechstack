@@ -37,21 +37,21 @@ export default function Article({ article }) {
             `}
         </Script>
         <Head>
-            <title>{`${article.attributes.title} - Defi.vn`}</title>
+            <title>{`${article.attributes.title} - OpenTechStack.com`}</title>
             <meta charSet="utf-8" />
             <link rel="icon" href="../defi.svg" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="description" content={`${article.attributes.title} - Defi.vn`} />
+            <meta name="description" content={`${article.attributes.title} - OpenTechStack.com`} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta property="og:title" content="Reading crypto researches | Đọc nghiên cứu crypto - DeFi.vn" />
+            <meta property="og:title" content="Reading crypto researches | Đọc nghiên cứu crypto - OpenTechStack.com" />
             <meta property="og:description" content={article.attributes.title} key="ogdesc" />
-            <meta property="og:url" content={`https://defi.vn/reading/${article.attributes.slug}`} key="ogurl" />
+            <meta property="og:url" content={`https://OpenTechStack.com/reading/${article.attributes.slug}`} key="ogurl" />
             <meta property="og:type" content="website"/>
             <meta property="og:image" content={article.attributes.image.data.attributes.formats.small.url} />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta property="twitter:domain" content="defi.vn" />
-            <meta property="twitter:url" content={`https://defi.vn/reading/${article.attributes.slug}`} />
-            <meta name="twitter:title" content={`${article.attributes.title} - Defi.vn`} />
+            <meta property="twitter:domain" content="OpenTechStack.com" />
+            <meta property="twitter:url" content={`https://OpenTechStack.com/reading/${article.attributes.slug}`} />
+            <meta name="twitter:title" content={`${article.attributes.title} - OpenTechStack.com`} />
             <meta name="twitter:description" content={article.attributes.title} />
             <meta name="twitter:image" content={article.attributes.image.data.attributes.formats.small.url} />
         </Head>

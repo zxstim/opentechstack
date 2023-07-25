@@ -12,7 +12,7 @@ export default function HowToBot() {
       {router.locale === "en" ? (
         <ul>
           <li>
-            <a href="https://buidl.defi.vn/bot-trade-la-gi#heading-lap-trinh-phan-mem">
+            <a href="https://buidl.OpenTechStack.com/bot-trade-la-gi#heading-lap-trinh-phan-mem">
               Bot trade 101
             </a>
           </li>
@@ -20,7 +20,7 @@ export default function HowToBot() {
       ) : (
         <ul>
           <li>
-            <a href="https://buidl.defi.vn/bot-trade-la-gi#heading-lap-trinh-phan-mem">
+            <a href="https://buidl.OpenTechStack.com/bot-trade-la-gi#heading-lap-trinh-phan-mem">
               Bot trade là gì?
             </a>
           </li>

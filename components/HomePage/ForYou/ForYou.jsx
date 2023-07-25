@@ -27,10 +27,8 @@ export default function ForYou() {
           gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
         }}
       >
-        <Link href="/dashboard">
-          <a style={{ textDecoration: "none" }}>
-            <h3 style={buttonStyle}>{t("title30")}</h3>
-          </a>
+        <Link href="/dashboard" style={{ textDecoration: "none"}}>
+          <h3 style={buttonStyle}>{t("title30")}</h3>
         </Link>
       </div>
     </>

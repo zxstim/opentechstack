@@ -33,19 +33,19 @@ export default function WalletInfoPage({ wallet }) {
           `}
       </Script>
       <Head>
-        <title>{`${wallet[0].attributes.name} - DeFi.vn`}</title>
+        <title>{`${wallet[0].attributes.name} - OpenTechStack.com`}</title>
         <meta charSet="utf-8" />
         <link rel="icon" href={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={`${wallet[0].attributes.name} - DeFi.vn`} />
+        <meta property="og:title" content={`${wallet[0].attributes.name} - OpenTechStack.com`} />
         <meta property="og:description" content={`Learn about ${wallet[0].attributes.name}`} />
-        <meta property="og:url" content={`https://www.defi.vn/${wallet[0].attributes.locale}/discover/wallets/info/${wallet[0].attributes.slug}`} />
+        <meta property="og:url" content={`https://www.OpenTechStack.com/${wallet[0].attributes.locale}/discover/wallets/info/${wallet[0].attributes.slug}`} />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content={`https://www.defi.vn/${wallet[0].attributes.locale}/discover/wallets/info/${wallet[0].attributes.slug}`} />
-        <meta name="twitter:title" content={`${wallet[0].attributes.name} - DeFi.vn`} />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content={`https://www.OpenTechStack.com/${wallet[0].attributes.locale}/discover/wallets/info/${wallet[0].attributes.slug}`} />
+        <meta name="twitter:title" content={`${wallet[0].attributes.name} - OpenTechStack.com`} />
         <meta name="twitter:description" content={`Learn about ${wallet[0].attributes.name}`} />
         <meta name="twitter:image" content={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url} />
       </Head>

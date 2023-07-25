@@ -37,7 +37,7 @@ export default function MemeLord(props) {
         <meta property="og:site_name" content="Meme lord path" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/start/meme-lord"
+          content="https://OpenTechStack.com/start/meme-lord"
           key="ogurl"
         />
       </Head>

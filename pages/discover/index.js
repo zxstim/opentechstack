@@ -27,21 +27,21 @@ export default function Discover(props) {
           `}
       </Script>
       <Head>
-        <title>Discover crypto projects | Khám phá các dự án crypto - DeFi.vn</title>
+        <title>Discover crypto projects | Khám phá các dự án crypto - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Discover crypto projects | Khám phá các dự án crypto - DeFi.vn" />
+        <meta property="og:title" content="Discover crypto projects | Khám phá các dự án crypto - OpenTechStack.com" />
         <meta property="og:description" content="Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics." />
-        <meta property="og:url" content="https://defi.vn/discover" />
+        <meta property="og:url" content="https://OpenTechStack.com/discover" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/d12cce69-5439-4bd1-3fda-c7ed7519a600/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/discover" />
-        <meta name="twitter:title" content="Discover crypto projects | Khám phá các dự án crypto - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/discover" />
+        <meta name="twitter:title" content="Discover crypto projects | Khám phá các dự án crypto - OpenTechStack.com" />
         <meta name="twitter:description" content="Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/d12cce69-5439-4bd1-3fda-c7ed7519a600/defi" />
       </Head>

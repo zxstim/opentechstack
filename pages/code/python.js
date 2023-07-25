@@ -34,7 +34,7 @@ export default function CodePython(props) {
         <meta property="og:title" content="Python" key="ogtitle" />
         <meta property="og:description" content="Python" key="ogdesc" />
         <meta property="og:site_name" content="Python" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/python" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/python" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

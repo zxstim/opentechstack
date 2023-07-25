@@ -34,7 +34,7 @@ export default function CodeCairo(props) {
         <meta property="og:title" content="Cairo" key="ogtitle" />
         <meta property="og:description" content="Cairo" key="ogdesc" />
         <meta property="og:site_name" content="Cairo" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/cairo" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/cairo" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

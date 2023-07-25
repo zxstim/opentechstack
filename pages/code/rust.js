@@ -34,7 +34,7 @@ export default function CodeRust(props) {
         <meta property="og:title" content="Rust" key="ogtitle" />
         <meta property="og:description" content="Rust" key="ogdesc" />
         <meta property="og:site_name" content="Rust" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/rust" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/rust" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

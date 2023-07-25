@@ -37,7 +37,7 @@ export default function Home(props) {
         <meta property="og:site_name" content="Open source" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/opensource"
+          content="https://OpenTechStack.com/opensource"
           key="ogurl"
         />
       </Head>

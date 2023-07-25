@@ -38,20 +38,20 @@ export default function Buidl(props) {
           `}
       </Script>
       <Head>
-        <title>BUIDL on Web3 | BUIDL trên Web3 - DeFi.vn</title>
+        <title>BUIDL on Web3 | BUIDL trên Web3 - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="description" content="Explore Web3 ecosystems, roadmaps on how to become builders, resources for you to become a great builder." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:url" content="https://defi.vn/buidl" />
-        <meta property="og:title" content="BUIDL on Web3 | BUIDL trên Web3 - DeFi.vn" />
+        <meta property="og:url" content="https://OpenTechStack.com/buidl" />
+        <meta property="og:title" content="BUIDL on Web3 | BUIDL trên Web3 - OpenTechStack.com" />
         <meta property="og:description" content="Explore Web3 ecosystems, roadmaps on how to become builders, resources for you to become a great builder." />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/b29f135c-9a23-4085-4f57-b7390ddf5400/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/buidl" />
-        <meta name="twitter:title" content="BUIDL on Web3 | BUIDL trên Web3 - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/buidl" />
+        <meta name="twitter:title" content="BUIDL on Web3 | BUIDL trên Web3 - OpenTechStack.com" />
         <meta name="twitter:description" content="Explore Web3 ecosystems, roadmaps on how to become builders, resources for you to become a great builder." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/b29f135c-9a23-4085-4f57-b7390ddf5400/defi" />
       </Head>

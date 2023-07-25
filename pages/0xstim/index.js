@@ -26,20 +26,20 @@ export default function ZxStim(props) {
           `}
       </Script>
       <Head>
-        <title>Contact me 0xStim | Liên hệ mình 0xStim - DeFi.vn</title>
+        <title>Contact me 0xStim | Liên hệ mình 0xStim - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Contact me 0xStim | Liên hệ mình 0xStim - DeFi.vn" />
-        <meta property="og:description" content="Get to know me 0xStim, DeFi.vn lead builder. Book your meeting with me here!" />
-        <meta property="og:url" content="https://defi.vn/0xstim" />
+        <meta property="og:title" content="Contact me 0xStim | Liên hệ mình 0xStim - OpenTechStack.com" />
+        <meta property="og:description" content="Get to know me 0xStim, OpenTechStack.com lead builder. Book your meeting with me here!" />
+        <meta property="og:url" content="https://OpenTechStack.com/0xstim" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/04875cae-074a-46c0-bdc4-b69470999000/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/0xstim" />
-        <meta name="twitter:title" content="Contact me 0xStim | Liên hệ mình 0xStim - DeFi.vn" />
-        <meta name="twitter:description" content="Get to know me 0xStim, DeFi.vn lead builder. Book your meeting with me here!" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/0xstim" />
+        <meta name="twitter:title" content="Contact me 0xStim | Liên hệ mình 0xStim - OpenTechStack.com" />
+        <meta name="twitter:description" content="Get to know me 0xStim, OpenTechStack.com lead builder. Book your meeting with me here!" />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/04875cae-074a-46c0-bdc4-b69470999000/defi" />
       </Head>
       <div className="App">
@@ -69,10 +69,10 @@ export default function ZxStim(props) {
             />
           </div>
           <div className={styles.links_container}>
-            <h3 className={styles.description}>Builder of <a href="https://defi.vn">Defi.vn</a> and <a href="https://gmgn.app">GmGn.app</a></h3>
+            <h3 className={styles.description}>Builder of <a href="https://OpenTechStack.com">OpenTechStack.com</a> and <a href="https://gmgn.app">GmGn.app</a></h3>
             <Link className={styles.anchor_tag} href="/">
               <div className={styles.links_button}>
-                Defi.vn
+                OpenTechStack.com
               </div>
             </Link>
             <a className={styles.anchor_tag} href="https://gmgn.app">

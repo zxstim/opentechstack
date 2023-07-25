@@ -34,7 +34,7 @@ export default function CodeGo(props) {
         <meta property="og:title" content="Go" key="ogtitle" />
         <meta property="og:description" content="Go" key="ogdesc" />
         <meta property="og:site_name" content="Go" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/code/go" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/code/go" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

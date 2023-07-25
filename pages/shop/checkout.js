@@ -35,7 +35,7 @@ export default function CheckoutPage(props) {
         <meta property="og:title" content="Checkout" key="ogtitle" />
         <meta property="og:description" content="Checkout" key="ogdesc" />
         <meta property="og:site_name" content="Checkout" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/shop/checkout" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/shop/checkout" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

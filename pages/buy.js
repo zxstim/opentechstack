@@ -29,20 +29,20 @@ export default function BuyCrypto(props) {
           `}
       </Script>
       <Head>
-        <title>Buy and Sell crypto | Mua và Bán crypto - DeFi.vn</title>
+        <title>Buy and Sell crypto | Mua và Bán crypto - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Buy and Sell crypto with the following ramp providers in different regions around the world." />
-        <meta property="og:title" content="Buy and Sell crypto | Mua và Bán crypto - DeFi.vn" />
+        <meta property="og:title" content="Buy and Sell crypto | Mua và Bán crypto - OpenTechStack.com" />
         <meta property="og:description" content="Buy and Sell crypto with the following ramp providers in different regions around the world." />
-        <meta property="og:url" content="https://defi.vn/buy" />
+        <meta property="og:url" content="https://OpenTechStack.com/buy" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a81ca87b-7138-4dd1-4a8c-e9fdcdbaa500/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/buy" />
-        <meta name="twitter:title" content="Buy and Sell crypto | Mua và Bán crypto - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/buy" />
+        <meta name="twitter:title" content="Buy and Sell crypto | Mua và Bán crypto - OpenTechStack.com" />
         <meta name="twitter:description" content="Buy and Sell crypto with the following ramp providers in different regions around the world." />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a81ca87b-7138-4dd1-4a8c-e9fdcdbaa500/defi" />
       </Head>

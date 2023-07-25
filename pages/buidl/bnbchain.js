@@ -36,7 +36,7 @@ export default function BuidlBnbChain(props) {
         <meta property="og:title" content="BNB Chain" key="ogtitle" />
         <meta property="og:description" content="BNB Chain" key="ogdesc" />
         <meta property="og:site_name" content="BNB Chain" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/buidl/bnbchain" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/buidl/bnbchain" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

@@ -56,7 +56,7 @@ export default function BuidlStation() {
                         width={30}
                         height={30}
                     />
-                    DeFi.vn Space
+                    OpenTechStack.com Space
                 </div>     
             </a>
             <h2>{t("cohosts")}</h2>

@@ -30,7 +30,7 @@ export default function HodlerPath() {
         <p>Below is a list of information sources for you to follow:</p>
         <ul>
           <li><a href="https://twitter.com/0xStim">0xStim Twitter account 👍</a></li>
-          <li><a href="https://twitter.com/defidotvn">Defi.vn Twitter account 👍</a></li>
+          <li><a href="https://twitter.com/defidotvn">OpenTechStack.com Twitter account 👍</a></li>
           <li>Twitter</li>
           <li>Media</li>
           <li>Media</li>

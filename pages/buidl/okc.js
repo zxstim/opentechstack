@@ -36,7 +36,7 @@ export default function BuidlOasys(props) {
         <meta property="og:title" content="OKC" key="ogtitle" />
         <meta property="og:description" content="OKC" key="ogdesc" />
         <meta property="og:site_name" content="OKC" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/buidl/okc" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/buidl/okc" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

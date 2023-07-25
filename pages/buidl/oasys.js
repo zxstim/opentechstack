@@ -36,7 +36,7 @@ export default function BuidlOasys(props) {
         <meta property="og:title" content="Oasys" key="ogtitle" />
         <meta property="og:description" content="Oasys" key="ogdesc" />
         <meta property="og:site_name" content="Oasys" key="ogsitename" />
-        <meta property="og:url" content="https://defi.vn/buidl/oasys" key="ogurl" />
+        <meta property="og:url" content="https://OpenTechStack.com/buidl/oasys" key="ogurl" />
       </Head>
       <div className="App">
         <div className="markdown-body">

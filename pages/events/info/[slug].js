@@ -38,19 +38,19 @@ export default function EventPage({ event }) {
           `}
       </Script>
       <Head>
-        <title>{`${event[0].attributes.name} - DeFi.vn`}</title>
+        <title>{`${event[0].attributes.name} - OpenTechStack.com`}</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={`${event[0].attributes.name} - DeFi.vn`} />
+        <meta property="og:title" content={`${event[0].attributes.name} - OpenTechStack.com`} />
         <meta property="og:description" content={`Learn about the event ${event[0].attributes.name}`} />
-        <meta property="og:url" content={`https://www.defi.vn/${event[0].attributes.locale}/events/info/${event[0].attributes.slug}`} />
+        <meta property="og:url" content={`https://www.OpenTechStack.com/${event[0].attributes.locale}/events/info/${event[0].attributes.slug}`} />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={event[0].attributes.banner.data.attributes.formats.thumbnail.url} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content={`https://www.defi.vn/${event[0].attributes.locale}/events/info/${event[0].attributes.slug}`} />
-        <meta name="twitter:title" content={`${event[0].attributes.name} - DeFi.vn`} />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content={`https://www.OpenTechStack.com/${event[0].attributes.locale}/events/info/${event[0].attributes.slug}`} />
+        <meta name="twitter:title" content={`${event[0].attributes.name} - OpenTechStack.com`} />
         <meta name="twitter:description" content={`Learn about ${event[0].attributes.name}`} />
         <meta name="twitter:image" content={event[0].attributes.banner.data.attributes.formats.thumbnail.url} />
       </Head>

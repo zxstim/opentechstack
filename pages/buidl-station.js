@@ -30,19 +30,19 @@ export default function BuidlStationPage({ events, pagination }) {
           `}
       </Script>
       <Head>
-        <title>Join our Developer Support event | Tham gia sự kiện hỗ trợ Dev của chúng tôi - DeFi.vn</title>
+        <title>Join our Developer Support event | Tham gia sự kiện hỗ trợ Dev của chúng tôi - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Join our Developer Support event | Tham gia sự kiện hỗ trợ Dev của chúng tôi - DeFi.vn" />
+        <meta property="og:title" content="Join our Developer Support event | Tham gia sự kiện hỗ trợ Dev của chúng tôi - OpenTechStack.com" />
         <meta property="og:description" content="Are you an aspiring or experienced developer looking for a supportive community to boost your skills and knowledge? Join our developer support event!" />
-        <meta property="og:url" content="https://defi.vn/dev-support" />
+        <meta property="og:url" content="https://OpenTechStack.com/dev-support" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/7ddd605f-f108-49fe-3f45-66fe10475000/defi" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="defi.vn" />
-        <meta property="twitter:url" content="https://www.defi.vn/dev-support" />
-        <meta name="twitter:title" content="Join our Developer Support event | Tham gia sự kiện hỗ trợ Dev của chúng tôi - DeFi.vn" />
+        <meta property="twitter:domain" content="OpenTechStack.com" />
+        <meta property="twitter:url" content="https://www.OpenTechStack.com/dev-support" />
+        <meta name="twitter:title" content="Join our Developer Support event | Tham gia sự kiện hỗ trợ Dev của chúng tôi - OpenTechStack.com" />
         <meta name="twitter:description" content="Are you an aspiring or experienced developer looking for a supportive community to boost your skills and knowledge? Join our developer support event!" />
         <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/7ddd605f-f108-49fe-3f45-66fe10475000/defi" />
       </Head>

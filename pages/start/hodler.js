@@ -37,7 +37,7 @@ export default function Hodler(props) {
         <meta property="og:site_name" content="Hodler path" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/start/hodler"
+          content="https://OpenTechStack.com/start/hodler"
           key="ogurl"
         />
       </Head>

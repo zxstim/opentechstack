@@ -37,7 +37,7 @@ export default function QuantBro(props) {
         <meta property="og:site_name" content="Quant bro" key="ogsitename" />
         <meta
           property="og:url"
-          content="https://defi.vn/start/quant-bro"
+          content="https://OpenTechStack.com/start/quant-bro"
           key="ogurl"
         />
       </Head>
