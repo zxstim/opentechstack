@@ -26,11 +26,11 @@ export default function ZxStim(props) {
           `}
       </Script>
       <Head>
-        <title>Contact me 0xStim | Liên hệ mình 0xStim - OpenTechStack.com</title>
+        <title>Contact me 0xStim - OpenTechStack.com</title>
         <meta charSet="utf-8" />
         <link rel="icon" href="../defi.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Contact me 0xStim | Liên hệ mình 0xStim - OpenTechStack.com" />
+        <meta property="og:title" content="Contact me 0xStim - OpenTechStack.com" />
         <meta property="og:description" content="Get to know me 0xStim, OpenTechStack.com lead builder. Book your meeting with me here!" />
         <meta property="og:url" content="https://OpenTechStack.com/0xstim" />
         <meta property="og:type" content="website"/>
@@ -46,15 +46,11 @@ export default function ZxStim(props) {
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/0xstim" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
+            <Link href="/0xstim" locale="en" style={{ textDecoration: "none" }}>
+              <p className="i18n-button">🇬🇧</p>
             </Link>
-            <Link href="/0xstim" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
+            <Link href="/0xstim" locale="vi" style={{ textDecoration: "none" }}>
+              <p className="i18n-button">🇻🇳</p>
             </Link>
           </div>
           <Link href="/">{t("back")}</Link>

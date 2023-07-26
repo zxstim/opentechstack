@@ -48,15 +48,11 @@ export default function Bot(props) {
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/bot" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
+            <Link href="/bot" locale="en" style={{ textDecoration: "none" }}>
+              <p className="i18n-button">🇬🇧</p>
             </Link>
-            <Link href="/bot" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
+            <Link href="/bot" locale="vi" style={{ textDecoration: "none" }}>
+              <p className="i18n-button">🇻🇳</p>
             </Link>
           </div>
           <Link href="/">{t("back")}</Link>

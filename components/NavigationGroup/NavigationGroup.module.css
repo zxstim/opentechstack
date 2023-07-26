@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  font-size: 16px;
+  text-align: left;
+  width: fit-content;
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+}
+
+/* Style the list */
+.breadcrumb {
+  padding: 8px 8px !important;
+  list-style: none;
+  background-color: #ffffff;
+  margin-bottom: 8px !important;
+  /* border: 2px solid #1a1a1a; */
+}
+
+/* Display list items side by side */
+.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/* Add a color on mouse-over */
+.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}

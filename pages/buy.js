@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import OtcPriceComponent from "../components/OtcPrice/OtcPrice";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
 import UpButton from "../components/UpButton/UpButton";
 import AppFooter from "../components/AppFooter/AppFooter";
 import RampProviders from "../components/RampProviders/RampProviders";
@@ -50,16 +50,7 @@ export default function BuyCrypto(props) {
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/buy" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/buy" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
+            <LanguageSelector path="/buy"/>
           </div>
           <Link href="/">{t("back")}</Link>
           <RampProviders />

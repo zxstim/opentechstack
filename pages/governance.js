@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import OtcPriceComponent from "../components/OtcPrice/OtcPrice";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
 import UpButton from "../components/UpButton/UpButton";
 import AppFooter from "../components/AppFooter/AppFooter";
 import ProposalsList from "../components/GovProposals/Proposals";
@@ -48,18 +48,7 @@ export default function Governance(props) {
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/governance" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/governance" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
+          <LanguageSelector path="/governance"/>
           <Link href="/">{t("back")}</Link>
           <h2>{t("subtitle")}</h2>
           <UpButton />

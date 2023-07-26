@@ -3,12 +3,28 @@ import Link from "next/link";
 import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
 import UpButton from "../../../components/UpButton/UpButton";
 import AppFooter from "../../../components/AppFooter/AppFooter";
 import Ethereum from "../../../components/Buidl/Ethereum/Ethereum";
 
 export default function BuidlEthereumRoadmap(props) {
   const { t } = useTranslation("ethereum");
+
+  const paths = {
+    fullPath: "/buidl/ethereum/ethereum-developer-roadmap",
+    pathNamesEn: [
+      "BUIDL",
+      "Ethereum",
+      "Ethereum Developer Roadmap",
+    ],
+    pathNamesVi: [
+      "BUIDL",
+      "Ethereum",
+      "Tài liệu BUIDL trên Ethereum",
+    ]
+  }
 
   return (
     <>
@@ -41,21 +57,10 @@ export default function BuidlEthereumRoadmap(props) {
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/buidl/ethereum" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/buidl/ethereum" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <Link href="/">{t("back")}</Link>
-            <Link href="/buidl">{t("prev")}</Link>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <LanguageSelector />
+            <NavigationGroup paths={paths}/>
           </div>
           <UpButton />
           <h2>👇 Start from here!</h2>

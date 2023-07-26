@@ -6,6 +6,8 @@ import { useTranslation } from "next-i18next";
 import UpButton from "../components/UpButton/UpButton";
 import AppFooter from "../components/AppFooter/AppFooter";
 import StartPath from "../components/StartPath/StartPath";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
 
 export default function Start(props) {
   const { t } = useTranslation("start");
@@ -47,22 +49,13 @@ export default function Start(props) {
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/start" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/start" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <LanguageSelector />
+            <NavigationGroup />
           </div>
-          <Link href="/">{t("back")}</Link>
           <UpButton />
           <h2>{t("subtitle")}</h2>
-          <StartPath />
+          {/* <StartPath /> */}
           <br />
           <hr />
           <AppFooter />

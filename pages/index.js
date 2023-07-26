@@ -7,7 +7,7 @@ import ForYou from "../components/HomePage/ForYou/ForYou";
 import ForDevelopers from "../components/HomePage/ForDevelopers/ForDevelopers";
 import ForEveryone from "../components/HomePage/ForEveryone/ForEveryone";
 import ForProjects from "../components/HomePage/ForProjects/ForProjects";
-import SingleAnnouncement from "../components/Announcements/SingleAnnouncement";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
 import AppFooter from "../components/AppFooter/AppFooter";
 import { fetchStrapiAPI } from "../lib/api";
 
@@ -52,22 +52,14 @@ export default function Home(props) {
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <div className="subtitle">{t("subtitle")}</div>
-          {/* <SingleAnnouncement announcement={props.announcements}/> */}
-          <div style={{ display: "flex" }}>
-            <Link href="/" locale="en">
-                <p className="i18n-button">🇬🇧</p>
-            </Link>
-            <Link href="/" locale="vi">
-                <p className="i18n-button">🇻🇳</p>
-            </Link>
-          </div>
+          <LanguageSelector />
           <ForYou />
           <ForDevelopers />
           <ForProjects />
           <ForEveryone />
           <br />
           <hr />
-          {/* <AppFooter /> */}
+          <AppFooter />
           <br />
         </div>
       </div>

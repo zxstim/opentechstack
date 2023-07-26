@@ -19,7 +19,8 @@ export default function AppFooter() {
     flexDirection: "row",
     alignItems: "center",
     gap: "8px",
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "black"
   }
 
   return (
@@ -27,7 +28,7 @@ export default function AppFooter() {
       {/* <h3>
         {t("footer")}
       </h3> */}
-      <Link href="/0xstim">
+      <Link href="/0xstim" style={{ textDecoration: "none" }}>
         <div style={socialButtonStim}>
           <Image
             src="/0xstim-nouns.svg"
@@ -81,15 +82,13 @@ export default function AppFooter() {
           </a>
         </div>
         <div style={socialButton}>
-          <Link href="/links">
-            <a style={{ textDecoration: "none" }}>
-              <Image
-                src="/icons8-link.svg"
-                alt="Youtube icon"
-                width={30}
-                height={30}
-              />
-            </a>
+          <Link href="/links" style={{ textDecoration: "none" }}>
+            <Image
+              src="/icons8-link.svg"
+              alt="Youtube icon"
+              width={30}
+              height={30}
+            />
           </Link>
         </div>
       </div>
@@ -99,31 +98,31 @@ export default function AppFooter() {
         </Link>
       </h4> */}
       <h4>
-        <a href="https://github.com/0xstim/next-defi-vn">{t("edit")}</a>
+        <a href="https://github.com/0xstim/opentechstack">{t("edit")}</a>
       </h4>
       <h4>
         <Link href="/disclaimer">
-          <a>{t("disclaimer")}</a>
+          {t("disclaimer")}
         </Link>
       </h4>
       <h4>
         <Link href="/contributors">
-          <a>{t("contributors")}</a>
+          {t("contributors")}
         </Link>
       </h4>
       <h4>
         <Link href="/privacy">
-          <a>{t("privacy")}</a>
+          {t("privacy")}
         </Link>
       </h4>
       <h4>
         <Link href="/terms-of-service">
-          <a>{t("tos")}</a>
+          {t("tos")}
         </Link>
       </h4>      
       <h4>
         <Link href="https://drive.google.com/drive/folders/1l8Nmz4HE2UCjLBeR-FsmABwKaE0QOtdR">
-          <a>{t("media")}</a>
+          {t("media")}
         </Link>
       </h4>
       {/* <h4>

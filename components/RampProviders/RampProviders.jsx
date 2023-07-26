@@ -194,10 +194,9 @@ export default function BuyCryptoProviders() {
           </div>
           <Link 
             href="/discover/ramp/info/unlimit-crypto"
+            className={styles.unlimit_info_button}
             >
-            <a className={styles.unlimit_info_button}>
-              {t("info")}
-            </a>
+            {t("info")}
           </Link>
         </div>
       <h2>{t("subtitle2")}</h2>
@@ -230,10 +229,9 @@ export default function BuyCryptoProviders() {
             </a>
             <Link 
               href={provider.infoLink}
+              className={styles.provider_info_button}
             >
-              <a className={styles.provider_info_button}>
-                {t("info")}
-              </a>
+              {t("info")}
             </Link>
           </div>
         ))}
