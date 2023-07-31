@@ -1,126 +1,122 @@
-import Head from "next/head";
 import Link from "next/link";
-import Script from "next/script";
+import Header from "../../components/Header/Header";
+import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../components/NavigationGroup/NavigationGroup";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import UpButton from "../../components/UpButton/UpButton";
 import AppFooter from "../../components/AppFooter/AppFooter";
 import AlertMessage from "../../components/AlertMessage/AlertMessage";
 
 export default function Discover(props) {
   const { t } = useTranslation("discover");
+  const headerContent = {
+    title: "Discover crypto projects - OpenTechStack.com",
+    description: "Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics.",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/d12cce69-5439-4bd1-3fda-c7ed7519a600/defi",
+  }
+
+  const paths = {
+    fullPath: "/discover",
+    pathNamesEn: [
+      "Discover"
+    ],
+    pathNamesVi: [
+      "Khám phá"
+    ],
+  }
+
+  // "title1": "🔑 Ví Web3",
+  // "title2": "🌏 Cộng đồng",
+  // "title3": "🧮 Quản lý danh mục",
+  // "title4": "🖼️ Bộ sưu tập NFT",
+  // "title5": "🎮 GameFi",
+  // "title6": "🏰 Metaverse",
+  // "title7": "💎 DeFi",
+  // "title8": "⛓️ Blockchain",
+  // "title9": "🔭 DAO",
+  // "title10": "🪜 NFTFi",
+  // "title11": "🔨 Hạ tầng",
+
+  const categories = [
+    {
+      id: 1,
+      name: `${t("title8")}`,
+      slug: "blockchains",
+    }, 
+    {
+      id: 2,
+      name: `${t("title1")}`,
+      slug: "wallets",
+    },
+    {
+      id: 3,
+      name: `${t("title7")}`,
+      slug: "defi-projects",
+    },
+    {
+      id: 4,
+      name: `${t("title4")}`,
+      slug: "nft-collections",
+    },
+    {
+      id: 5,
+      name: `${t("title5")}`,
+      slug: "gamefi-projects",
+    },
+    {
+      id: 6,
+      name: `${t("title6")}`,
+      slug: "metaverses",
+    },
+    {
+      id: 7,
+      name: `${t("title3")}`,
+      slug: "portfolio-management",
+    },
+    {
+      id: 8,
+      name: `${t("title2")}`,
+      slug: "communities",
+    },
+    {
+      id: 9,
+      name: `${t("title9")}`,
+      slug: "daos",
+    },
+    {
+      id: 10,
+      name: `${t("title10")}`,
+      slug: "nftfi-projects",
+    },
+    {
+      id: 11,
+      name: `${t("title11")}`,
+      slug: "infrastructure",
+    },
+  ]
+
+
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>Discover crypto projects | Khám phá các dự án crypto - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../defi.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Discover crypto projects | Khám phá các dự án crypto - OpenTechStack.com" />
-        <meta property="og:description" content="Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics." />
-        <meta property="og:url" content="https://OpenTechStack.com/discover" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/d12cce69-5439-4bd1-3fda-c7ed7519a600/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com/discover" />
-        <meta name="twitter:title" content="Discover crypto projects | Khám phá các dự án crypto - OpenTechStack.com" />
-        <meta name="twitter:description" content="Find your next favourite crypto projects, explore the ecosystem that they are in, check out their socials, see their metrics." />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/d12cce69-5439-4bd1-3fda-c7ed7519a600/defi" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/discover" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/discover" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <Link href="/">{t("back")}</Link>
+          <LanguageSelector />
+          <NavigationGroup paths={paths} />
           <h2>{t("subtitle")}</h2>
-          <UpButton />
           <div className="nav-menu-grid">
-            <Link href="/discover/blockchains">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title8")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/wallets">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title1")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/defi-projects">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title7")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/nft-projects">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title4")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/nftfi-projects">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title10")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/metaverses">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title6")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/gamefi-projects">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title5")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/daos">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title9")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/portfolio-projects">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title3")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/infrastructure">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title11")}</h3>
-              </a>
-            </Link>
-            <Link href="/discover/communities">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title2")}</h3>
-              </a>
-            </Link>
+            {
+              categories.map((category) => (
+                <Link href={`/discover/${category.slug}`} key={category.id} style={{ textDecoration: "none" }}>
+                  <h3 className="nav-menu-button">{category.name}</h3>
+                </Link>
+              ))
+            }
           </div>
-          {/* <DiscoverList /> */}
           <br />
           <AlertMessage type="info" message={t("disclosure")} headline={t("note")} />
           <hr />

@@ -76,10 +76,8 @@ export default function HackathonsList() {
               {event.price ? <div>{event.price}</div> : <div>-</div>}
             </div>
             <div className="event-book-container">
-              <Link href={event.registration}>
-                <a style={{ textDecoration: "none", color: "#000000" }}>
-                  <div className="event-book-badge">{t("register")}</div>
-                </a>
+              <Link href={event.registration} style={{ textDecoration: "none", color: "#000000" }}>
+                <div className="event-book-badge">{t("register")}</div>
               </Link>
             </div>
           </div>

@@ -9,28 +9,6 @@ import styles from "./DevToolsList.module.css";
 export default function DevToolsList() {
   const [index, setIndex] = useState(20);
   const [latestDevToolsList, setLatesDevToolsList] = useState(devtoolslist);
-  // const [walletChains, setWalletChains] = useState(() => {
-  //   let walletChains = [];
-  //   devtoolslist.forEach((devtool) => {
-  //     wallet.chains.forEach((chain) => {
-  //       if (!walletChains.includes(chain)) {
-  //         walletChains.push(chain);
-  //       }
-  //     });
-  //   });
-  //   return walletChains;
-  // });
-  // const [walletTechs, setWalletTechs] = useState(() => {
-  //   let walletTechs = [];
-  //   devtoolslist.forEach((wallet) => {
-  //     wallet.tech.forEach((tech) => {
-  //       if (!walletTechs.includes(tech)) {
-  //         walletTechs.push(tech);
-  //       }
-  //     });
-  //   });
-  //   return walletTechs;
-  // });
   const [devtools, setDevtools] = useState(devtoolslist.slice(0, index));
   const [hasMore, setHasMore] = useState(true);
   const router = useRouter();
@@ -229,7 +207,7 @@ export default function DevToolsList() {
                   <span>
                     <a href={devtool.web}>
                       <Image
-                        src="/icons8-webpage.svg"
+                        src="/icons8-website.svg"
                         alt="Web icon"
                         width={32}
                         height={32}
@@ -238,10 +216,8 @@ export default function DevToolsList() {
                   </span>
                 ) : null}
               </div>
-              <Link href={devtool.page}>
-                <a style={{ textDecoration: "none", color: "#000000" }}>
-                  <div className={styles.devtools_item_cta_learn_more}>{t("cta")}</div>
-                </a>
+              <Link href={devtool.page} style={{ textDecoration: "none", color: "#000000" }}>
+                <div className={styles.devtools_item_cta_learn_more}>{t("cta")}</div>
               </Link>
             </div>
           </div>

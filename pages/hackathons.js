@@ -1,6 +1,7 @@
-import Head from "next/head";
+import Header from "../components/Header/Header";
 import Link from "next/link";
-import Script from "next/script";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import UpButton from "../components/UpButton/UpButton";
@@ -9,58 +10,32 @@ import HackathonsList from "../components/HackathonsList/HackathonsList";
 
 export default function Hackathons(props) {
   const { t } = useTranslation("hackathons");
+  const headerContent = {
+    title: "Find upcoming hackathons to attend - OpenTechStack.com",
+    description: "Check out a global list of hackathons around the world, find out about the dates, locations and how to register.",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/b394a9c7-6daa-46f2-5165-e3c336e93900/defi",
+  }
+
+  const paths = {
+    fullPath: "/hackathons",
+    pathNamesEn: [
+      "Hackathons"
+    ],
+    pathNamesVi: [
+      "Hackathon"
+    ],
+  }
+
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>Find your crypto hackathons | Tìm sự kiện hackathon yêu thích - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../defi.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Check out a global list of crypto hackathons around the world, find out about the dates, locations and how to register." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Find your crypto hackathons | Tìm sự kiện hackathon yêu thích - OpenTechStack.com" />
-        <meta property="og:description" content="Check out a global list of crypto hackathons around the world, find out about the dates, locations and how to register." />
-        <meta property="og:url" content="https://OpenTechStack.com/hackathons" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/b394a9c7-6daa-46f2-5165-e3c336e93900/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com/hackathons" />
-        <meta name="twitter:title" content="Find your crypto hackathons | Tìm sự kiện hackathon yêu thích - OpenTechStack.com" />
-        <meta name="twitter:description" content="Check out a global list of crypto hackathons around the world, find out about the dates, locations and how to register." />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/b394a9c7-6daa-46f2-5165-e3c336e93900/defi" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/hackathons" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/hackathons" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <Link href="/">{t("back")}</Link>
-          <UpButton />
+          <LanguageSelector />
+          <NavigationGroup paths={paths} />
           <h2>{t("hackathons-list")}</h2>
           <HackathonsList />
           <br />

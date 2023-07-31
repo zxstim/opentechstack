@@ -20,7 +20,7 @@ export default function AppFooter() {
     alignItems: "center",
     gap: "8px",
     cursor: "pointer",
-    color: "black"
+    color: "black",
   }
 
   return (
@@ -125,6 +125,16 @@ export default function AppFooter() {
           {t("media")}
         </Link>
       </h4>
+      <h5 style={{ 
+        border: "2px solid #1a1a1a", 
+        width: "300px",
+        padding: "8px 8px 0px 8px",
+        backgroundColor: "#f0f0f0",
+        }}>
+        <p>🏛️ Pyhash LLC</p>
+        <p>📍 256 Chapman Road STE 105-4, Newark, Delaware, Zip Code 19702, USA</p>
+        <p>📧 victor@pyhash.com</p>
+      </h5>
       {/* <h4>
         <Link href="/donate">
           <a>{t("donate")}</a>

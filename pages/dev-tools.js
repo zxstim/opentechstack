@@ -1,9 +1,9 @@
-import Head from "next/head";
+import Header from "../components/Header/Header";
 import Link from "next/link";
-import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import UpButton from "../components/UpButton/UpButton";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
 import DevToolsList from "../components/DevToolsList/DevToolsList";
 import AppFooter from "../components/AppFooter/AppFooter";
 
@@ -11,56 +11,32 @@ import AppFooter from "../components/AppFooter/AppFooter";
 export default function DevTools(props) {
   const { t } = useTranslation("dev-tools");
 
+  const headerContent = {
+    title: "Find your next favourite tool for development - OpenTechStack.com",
+    description: "Find your next favourite tool for development, from coding languages, server setup, recommendations to open source options.",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a6d25640-36ed-4985-a8bd-0f8e1c170b00/defi",
+  }
+
+  const paths = {
+    fullPath: "/dev-tools",
+    pathNamesEn: [
+      "Dev Tools"
+    ],
+    pathNamesVi: [
+      "Công cụ lập trình"
+    ],
+  }
+
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>Find your next favourite tool for development | Tìm công cụ yêu thích mới nhất của bạn - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../defi.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Learn how to setup trading bot | Học cách thiết lập bot trade - OpenTechStack.com" />
-        <meta property="og:description" content="Learn how to setup trading bot, from coding languages, server setup, recommendations to open source options." />
-        <meta property="og:url" content="https://OpenTechStack.com/dev-tools" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a6d25640-36ed-4985-a8bd-0f8e1c170b00/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com/dev-tools" />
-        <meta name="twitter:title" content="Learn how to setup trading bot | Học cách thiết lập bot trade - OpenTechStack.com" />
-        <meta name="twitter:description" content="Learn how to setup trading bot, from coding languages, server setup, recommendations to open source options." />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a6d25640-36ed-4985-a8bd-0f8e1c170b00/defi" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/dev-tools" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/dev-tools" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <Link href="/">{t("back")}</Link>
-          <UpButton />
+          <LanguageSelector />
+          <NavigationGroup paths={paths}/>
           <h2>{t("subtitle")}</h2>
           <DevToolsList />
           <br />

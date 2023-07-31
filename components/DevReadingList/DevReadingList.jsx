@@ -5,11 +5,11 @@ import Image from "next/image";
 import PaginatedList from "../PaginatedList/PaginatedList";
 import formatArticleTimeStampEn from "../../utils/formatArticleTimeStampEn";
 import formatArticleTimeStampVi from "../../utils/formatArticleTimeStampVi";
-import styles from "./ReadingList.module.css";
+import styles from "./DevReadingList.module.css";
 import { useRouter } from "next/router";
 
 
-export default function ReadingList({ articles, pagination, categories }) {
+export default function DevReadingList({ articles, pagination, categories }) {
   // const { t } = useTranslation("reading");
   const router = useRouter();
 
@@ -17,13 +17,14 @@ export default function ReadingList({ articles, pagination, categories }) {
       <div className={styles.layout_container}>
         <PaginatedList
           currentPage={pagination.page}
-          totalItems={pagination.total}
+          totalItems={pagination.total} 
           totalPages={pagination.pageCount}
-          indexPagePath="reading/page"
+          indexPagePath="dev-guides/page"
         />
         <div className={styles.reading_list_container}>
           {articles.map((article) => (
-            <div className={styles.article_container}>
+            <Link href={`/dev-guides/${article.attributes.slug}`} key={article.id} className={styles.reading_anchor_tag}>
+              <div className={styles.article_container}>
                 <Image
                   src={article.attributes.image.data.attributes.formats.small.url}
                   alt={article.attributes.image.data.attributes.alternativeText}
@@ -57,14 +58,15 @@ export default function ReadingList({ articles, pagination, categories }) {
                     <div>{article.attributes.author.data.attributes.name}</div>
                   </div>
                 </div>
-            </div>
+              </div>         
+            </Link>
           ))}
         </div>
         <PaginatedList
           currentPage={pagination.page}
           totalItems={pagination.total} 
           totalPages={pagination.pageCount}
-          indexPagePath="reading/page"
+          indexPagePath="dev-guides/page"
         />
       </div>
   );

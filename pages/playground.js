@@ -1,9 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
+import Header from "../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import UpButton from "../components/UpButton/UpButton";
 import WalletManagement from "../components/PlaygroundToys/WalletManagement/WalletManagement";
 import EnsCheck from "../components/PlaygroundToys/WalletManagement/EnsCheck";
 import AppFooter from "../components/AppFooter/AppFooter";
@@ -16,6 +13,9 @@ import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
+
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
 
 const { chains, provider, webSocketProvider } = configureChains(
   [mainnet],
@@ -54,60 +54,33 @@ export default function Playground(props) {
   const { t } = useTranslation("playground");
   // Configure chains & providers with the Alchemy provider.
   // Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
+  const headerContent = {
+    title: "Play and learn about Web3 - OpenTechStack.com",
+    description: "Try and experience the power of Web3 with zero risk of losing money.",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/367f3e41-52b9-4e72-49da-2c17111b9f00/defi",
+  }
 
+  const paths = {
+    fullPath: "/playground",
+    pathNamesEn: [
+      "Playground"
+    ],
+    pathNamesVi: [
+      "Sân chơi"
+    ],
+  }
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../defi.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Try and experience the power of Web3 with zero risk of losing money." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - OpenTechStack.com" />
-        <meta property="og:description" content="Try and experience the power of Web3 with zero risk of losing money." key="ogdesc" />
-        <meta property="og:url" content="https://OpenTechStack.com/playground" key="ogurl" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/367f3e41-52b9-4e72-49da-2c17111b9f00/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com/playground" />
-        <meta name="twitter:title" content="Play and learn about Web3 | Dùng thử và tìm hiểu về Web3 - OpenTechStack.com" />
-        <meta name="twitter:description" content="Try and experience the power of Web3 with zero risk of losing money." />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/367f3e41-52b9-4e72-49da-2c17111b9f00/defi" />
-      </Head>
+      <Header content={headerContent} />
       <WagmiConfig client={client}>
         <div className="App">
           <div className="markdown-body">
             <h1 id="top">{t("title")}</h1>
-            <div style={{ display: "flex", marginBottom: "10px" }}>
-              <Link href="/playground" locale="en">
-                <a style={{ textDecoration: "none" }}>
-                  <p className="i18n-button">🇬🇧</p>
-                </a>
-              </Link>
-              <Link href="/playground" locale="vi">
-                <a style={{ textDecoration: "none" }}>
-                  <p className="i18n-button">🇻🇳</p>
-                </a>
-              </Link>
-            </div>
-            <Link href="/">{t("back")}</Link>
-            <UpButton />
+            <LanguageSelector />
+            <NavigationGroup paths={paths} />
             <h2>{t("subtitle")}</h2>
             <WalletManagement />
             <EnsCheck />

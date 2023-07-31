@@ -1,62 +1,267 @@
-import Head from "next/head";
 import Link from "next/link";
-import Script from "next/script";
+import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import ForYou from "../components/HomePage/ForYou/ForYou";
-import ForDevelopers from "../components/HomePage/ForDevelopers/ForDevelopers";
-import ForEveryone from "../components/HomePage/ForEveryone/ForEveryone";
-import ForProjects from "../components/HomePage/ForProjects/ForProjects";
 import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
+import Header from "../components/Header/Header";
 import AppFooter from "../components/AppFooter/AppFooter";
-import { fetchStrapiAPI } from "../lib/api";
+// import { fetchStrapiAPI } from "../lib/api";
 
 export default function Home(props) {
   const { t } = useTranslation("common");
+  const headerContent = {
+    title: "OpenTechStack.com - Explore everything about the modern tech stack",
+    description: "OpenTechStack.com is a community project aiming to be an open technical resource hub for everyone",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/8d6a2d48-99bc-485c-4afc-239196f02200/defi",
+  }
+  const buttonStyle = {
+    backgroundColor: "#ffffff",
+    WebkitAppearance: "none",
+    borderRadius: "6px",
+    border: "2px solid var(--color-fg-default)",
+    color: "var(--color-fg-default)",
+    boxShadow: "3px 3px black"
+  };
+
+  const headingStyle = {
+    margin: "0px 0px 0px 0px",
+    padding: "15px 15px 10px 15px",
+    fontSize: "20px",
+    color: "var(--color-fg-default)",
+  }
+
+  const paragraphStyle = {
+    color: "var(--color-fg-muted)",
+    margin: "0px 0px 0px 0px",
+    padding: "0px 15px 15px 15px",
+    fontSize: "14px",
+  }
+
+  const stimButtonStyle = {
+    backgroundColor: "#ffffff",
+    WebkitAppearance: "none",
+    borderRadius: "6px",
+    border: "2px solid #4839f4",
+    color: "#4839f4",
+    boxShadow: "3px 3px #4839f4"
+  };
+
+  const stimHeadingStyle = {
+    margin: "0px 0px 0px 0px",
+    padding: "15px 15px 10px 15px",
+    fontSize: "20px",
+    color: "#4839f4",
+  }
+
+  const stimParagraphStyle = {
+    color: "#4839f4",
+    margin: "0px 0px 0px 0px",
+    padding: "0px 15px 15px 15px",
+    fontSize: "14px",
+  }
+
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>OpenTechStack.com - Explore everything about the modern tech stack</title>
-        <meta name="description" content="OpenTechStack.com is a community project aiming to be an open Web3 resource hub for everyone"/>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../opentechstack.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:url" content="https://www.OpenTechStack.com" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="OpenTechStack.com - DeFi Vietnam | DeFi Việt Nam" />
-        <meta property="og:description" content="OpenTechStack.com is a community project aiming to be an open Web3 resource hub for everyone" />
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/8d6a2d48-99bc-485c-4afc-239196f02200/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com" />
-        <meta name="twitter:title" content="OpenTechStack.com - DeFi Vietnam | DeFi Việt Nam" />
-        <meta name="twitter:description" content="OpenTechStack.com is a community project aiming to be an open Web3 resource hub for everyone" />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/8d6a2d48-99bc-485c-4afc-239196f02200/defi" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <div className="subtitle">{t("subtitle")}</div>
           <LanguageSelector />
-          <ForYou />
-          <ForDevelopers />
-          <ForProjects />
-          <ForEveryone />
+          <h2>{t("section-4")}</h2>
+          <div
+            style={{
+              display: "grid",
+              gap: "25px 25px",
+              gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            }}
+          >
+            <div style={buttonStyle}>
+              <Link href="/dashboard" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title30")}</h3>
+                <p style={paragraphStyle}>{t("subtitle30")}</p>
+              </Link>
+            </div>
+            <div style={stimButtonStyle}>
+              <Link href="https://stimpacks.com" style={{ textDecoration: "none"}}>
+                  <h3 style={stimHeadingStyle}>
+                    <Image 
+                      src="/stimpacks-logo.svg" 
+                      alt="stimpacks-logo" 
+                      width={20} 
+                      height={20}
+                      style={{marginRight: "4px"}} 
+                    />
+                    {t("title31")}
+                  </h3>
+                  <p style={stimParagraphStyle}>{t("subtitle31")}</p>
+              </Link>
+            </div>
+          </div>
+          <h2>{t("section-1")}</h2>
+          <div
+            style={{
+              display: "grid",
+              gap: "25px 25px",
+              gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            }}
+          >
+            <div style={buttonStyle}>
+              <Link href="/build" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title1")}</h3>
+                <p style={paragraphStyle}>{t("subtitle1")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/code" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title5")}</h3>
+                <p style={paragraphStyle}>{t("subtitle5")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/dev-tools" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title17")}</h3>
+                <p style={paragraphStyle}>{t("subtitle17")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/bot" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title3")}</h3>
+                <p style={paragraphStyle}>{t("subtitle3")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/hackathons" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title4")}</h3>
+                <p style={paragraphStyle}>{t("subtitle4")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/dev-guides" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title16")}</h3>
+                <p style={paragraphStyle}>{t("subtitle16")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/buidl-station" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title28")}</h3>
+                <p style={paragraphStyle}>{t("subtitle28")}</p>
+              </Link>
+            </div>
+          </div>
+          <h2>{t("section-3")}</h2>
+          <div
+            style={{
+              display: "grid",
+              gap: "25px 25px",
+              gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            }}
+          >
+            <div style={buttonStyle}>
+              <Link href="/services" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title13")}</h3>
+                <p style={paragraphStyle}>{t("subtitle13")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/investors" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title12")}</h3>
+                <p style={paragraphStyle}>{t("subtitle12")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/pros-for-hire" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title6")}</h3>
+                <p style={paragraphStyle}>{t("subtitle6")}</p>
+              </Link>
+            </div>
+          </div>
+          <h2>{t("section-2")}</h2>
+          <div
+            style={{
+              display: "grid",
+              gap: "25px 25px",
+              gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            }}
+          >
+            <div style={buttonStyle}>
+              <Link href="/start" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title21")}</h3>
+                <p style={paragraphStyle}>{t("subtitle21")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/buy" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title7")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle7")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/shop" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title24")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle24")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/discover" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title19")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle19")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/playground" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title27")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle27")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/jobs" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title29")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle29")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/reading" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title25")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle25")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/playground" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title18")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle18")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/governance" style={{ textDecoration: "none"}}>
+                  <h3 style={headingStyle}>{t("title26")}</h3>
+                  <p style={paragraphStyle}>{t("subtitle26")}</p>
+              </Link>
+            </div>
+            {/* <Link href="/trading">
+              <a style={{ textDecoration: "none" }}>
+                <h3 style={buttonStyle}>{t("title8")}</h3>
+              </a>
+            </Link>
+            <Link href="/defi-analytics">
+              <a style={{ textDecoration: "none" }}>
+                <h3 style={buttonStyle}>{t("title9")}</h3>
+              </a>
+            </Link>
+            <Link href="/learn-defi">
+              <a style={{ textDecoration: "none" }}>
+                <h3 style={buttonStyle}>{t("title11")}</h3>
+              </a>
+            </Link> */}
+            {/* <Link href="/rekt">
+              <a style={{ textDecoration: "none" }}>
+                <h3 style={buttonStyle}>{t("title20")}</h3>
+              </a>
+            </Link> */}
+          </div>
           <br />
           <hr />
           <AppFooter />

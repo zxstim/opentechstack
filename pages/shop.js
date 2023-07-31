@@ -1,67 +1,39 @@
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import UpButton from "../components/UpButton/UpButton";
+import Header from "../components/Header/Header";
+import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
 import AppFooter from "../components/AppFooter/AppFooter";
 import StoreInventories from "../components/Shop/StoreInventories";
 
 export default function Shop(props) {
   const { t } = useTranslation("shop");
+  const headerContent = {
+    title: "Merchandise Shop - OpenTechStack.com",
+    description: "Check out the latest crypto cold wallets, merchandises and daily necessities.",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/1cf7e68c-4f01-47ce-c119-ff147700df00/defi",
+  }
+
+  const paths = {
+    fullPath: "/shop",
+    pathNamesEn: [
+      "Shop"
+    ],
+    pathNamesVi: [
+      "Cửa hàng"
+    ],
+  }
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>DeFi Shop | Cửa hàng DeFi - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../defi.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Check out the latest crypto cold wallets, merchandises and daily necessities." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="DeFi Shop | Cửa hàng DeFi - OpenTechStack.com" />
-        <meta property="og:description" content="Check out the latest crypto cold wallets, merchandises and daily necessities." />
-        <meta property="og:url" content="https://OpenTechStack.com/shop" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/1cf7e68c-4f01-47ce-c119-ff147700df00/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com/shop" />
-        <meta name="twitter:title" content="DeFi Shop | Cửa hàng DeFi - OpenTechStack.com" />
-        <meta name="twitter:description" content="Check out the latest crypto cold wallets, merchandises and daily necessities." />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/1cf7e68c-4f01-47ce-c119-ff147700df00/defi" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/shop" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/shop" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <Link href="/">{t("back")}</Link>
-          <UpButton />
+          <LanguageSelector />
+          <NavigationGroup paths={paths} />
           <h2>{t("subtitle")}</h2>
           <StoreInventories />
           <br />

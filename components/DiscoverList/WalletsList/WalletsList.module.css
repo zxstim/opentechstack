@@ -189,6 +189,7 @@
   font-weight: bold;
   text-transform: uppercase;
   width: fit-content;
+  border: 2px solid #1a1a1a;
 }
 
 .wallets_load_more_button {

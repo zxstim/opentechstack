@@ -4,26 +4,25 @@ import { useTranslation } from "next-i18next";
 import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
 import AppFooter from "../components/AppFooter/AppFooter";
-import ProposalsList from "../components/GovProposals/Proposals";
+// import DevsList from "../components/DevsList/DevsList";
 
-
-export default function Governance(props) {
-  const { t } = useTranslation("governance");
+export default function Hiring(props) {
+  const { t } = useTranslation("pros-for-hire");
   const headerContent = {
-    title: "Governance for OpenTechStack - OpenTechStack.com",
-    description: "Propose, discuss and govern how OpenTechStack.com will grow. Contribute to an open hub and help shape the Web3 industry.",
+    title: "Hire crypto professionals | Tuyển dụng nhân viên crypto - OpenTechStack.com",
+    description: "Find your next crypto employees, freelancers, whether they are developers, sales person or marketer.",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",
-    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/0ad78fdf-55c6-4b61-81b2-26e51dde2f00/defi",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/9cf26e72-dc40-4d93-823b-da167198ae00/defi",
   }
 
   const paths = {
-    fullPath: "/governance",
+    fullPath: "/pros-for-hire",
     pathNamesEn: [
-      "Governance"
+      "Pros for hire!"
     ],
     pathNamesVi: [
-      "Quản trị"
+      "Pro cho thuê!"
     ],
   }
 
@@ -33,10 +32,8 @@ export default function Governance(props) {
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <LanguageSelector path="/governance"/>
+          <LanguageSelector />
           <NavigationGroup paths={paths} />
-          <h2>{t("subtitle")}</h2>
-          <ProposalsList />
           <br />
           <hr />
           <AppFooter />
@@ -46,11 +43,10 @@ export default function Governance(props) {
   );
 }
 
-// This gets called on every request
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "governance"])),
+      ...(await serverSideTranslations(locale, ["common", "pros-for-hire"])),
       // Will be passed to the page component as props
     },
   };

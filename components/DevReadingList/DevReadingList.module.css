@@ -19,11 +19,13 @@
     border: 2px solid #1a1a1a;
     box-shadow: 3px 3px #1a1a1a;
     cursor: pointer;
+    align-self: stretch;
 }
 
 .article_content_container {
     display: flex;
-    flex-direction: column;   
+    gap: 4px;
+    flex-direction: column;
 }
 
 .tags_container {
@@ -31,8 +33,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4px;
-    margin-bottom: 16px;
-    margin-top: 4px;
+    margin-bottom: 8px;
 }
 
 .tag {
@@ -52,8 +53,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #1a1a1a;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
 .timestamp {
@@ -76,7 +76,6 @@
     width: fit-content;
     border: 2px solid #1a1a1a;
     border-radius: 25px;
-    margin-top: auto;
     margin-bottom: 8px;
 }
 

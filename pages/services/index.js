@@ -1,89 +1,74 @@
-import Head from "next/head";
+import Header from "../../components/Header/Header";
 import Link from "next/link";
-import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import UpButton from "../../components/UpButton/UpButton";
 import AppFooter from "../../components/AppFooter/AppFooter";
 import AlertMessage from "../../components/AlertMessage/AlertMessage";
+import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../components/NavigationGroup/NavigationGroup";
 
 export default function Services(props) {
   const { t } = useTranslation("services");
+  const headerContent = {
+    title: "Find your service provider - OpenTechStack.com",
+    description: "Find your service provider in our comprehensive list",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/9cf26e72-dc40-4d93-823b-da167198ae00/defi",
+  }
+
+  const paths = {
+    fullPath: "/services",
+    pathNamesEn: [
+      "Services"
+    ],
+    pathNamesVi: [
+      "Dịch vụ"
+    ],
+  }
+
+  const categories = [
+    {
+      id: 1,
+      name: "Audit",
+      slug: "audit",
+    },
+    {
+      id: 2,
+      name: "Marketing",
+      slug: "marketing",
+    },
+    {
+      id: 3,
+      name: "Analytics",
+      slug: "analytics",
+    },
+    {
+      id: 4,
+      name: "Custody",
+      slug: "custody",
+    },
+  ]
+
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>Find your a crypto service provider | Tìm một nhà cung cấp dịch vụ crypto - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../defi.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Find your crypto service provider in our comprehensive list" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Find your a crypto service provider | Tìm một nhà cung cấp dịch vụ crypto - OpenTechStack.com" />
-        <meta property="og:description" content="Find your crypto service provider in our comprehensive list" />
-        <meta property="og:url" content="https://OpenTechStack.com/services" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/9cf26e72-dc40-4d93-823b-da167198ae00/defi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content="https://www.OpenTechStack.com/services" />
-        <meta name="twitter:title" content="Find your a crypto service provider | Tìm một nhà cung cấp dịch vụ crypto - OpenTechStack.com" />
-        <meta name="twitter:description" content="Find your crypto service provider in our comprehensive list" />
-        <meta name="twitter:image" content="https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/9cf26e72-dc40-4d93-823b-da167198ae00/defi" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/discover" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/discover" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <Link href="/">{t("back")}</Link>
+          <LanguageSelector />
+          <NavigationGroup paths={paths}/>
           <h2>{t("subtitle")}</h2>
-          <UpButton />
           <div className="nav-menu-grid">
-            <Link href="/services/audit">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title1")}</h3>
-              </a>
-            </Link>
-            <Link href="/services/marketing">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title2")}</h3>
-              </a>
-            </Link>
-            <Link href="/services/analytics">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title3")}</h3>
-              </a>
-            </Link>
-            <Link href="/services/custody">
-              <a style={{ textDecoration: "none" }}>
-                <h3 className="nav-menu-button">{t("title4")}</h3>
-              </a>
-            </Link>
+          {
+            categories.map((category) => (
+              <Link href={`/services/${category.slug}`} key={category.id} style={{ textDecoration: "none" }}>
+                <h3 className="nav-menu-button">{category.name}</h3>
+              </Link>
+            ))
+          }
           </div>
           <br />
           <AlertMessage type="info" message={t("disclosure")} headline={t("note")} />

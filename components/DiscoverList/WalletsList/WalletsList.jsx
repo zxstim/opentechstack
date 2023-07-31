@@ -160,10 +160,8 @@ export default function WalletsList({ wallets, pagination, walletCategories }) {
                     </span>
                   ) : null}
                 </div>
-                <Link href={`/discover/wallets/info/${wallet.attributes.slug}`}>
-                  <a style={{ textDecoration: "none", color: "#000000" }}>
-                    <div className={styles.cta_learn_more}>{t("cta")}</div>
-                  </a>
+                <Link href={`/discover/wallets/info/${wallet.attributes.slug}`} style={{ textDecoration: "none", color: "#000000" }}>
+                  <div className={styles.cta_learn_more}>{t("cta")}</div>
                 </Link>
               </div>
             </div> :
@@ -289,10 +287,8 @@ export default function WalletsList({ wallets, pagination, walletCategories }) {
                   </span>
                 ) : null}
               </div>
-              <Link href={`/discover/wallets/info/${wallet.attributes.slug}`}>
-                <a style={{ textDecoration: "none", color: "#000000" }}>
-                  <div className={styles.cta_learn_more}>{t("cta")}</div>
-                </a>
+              <Link href={`/discover/wallets/info/${wallet.attributes.slug}`} style={{ textDecoration: "none", color: "#000000" }}>
+                <div className={styles.cta_learn_more}>{t("cta")}</div>
               </Link>
             </div>
           </div> : null

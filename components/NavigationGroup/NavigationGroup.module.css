@@ -16,9 +16,10 @@
 
 /* Style the list */
 .breadcrumb {
-  padding: 8px 8px !important;
+  padding: 8px 0px !important;
   list-style: none;
   background-color: #ffffff;
+  margin-top: 8px !important;
   margin-bottom: 8px !important;
   /* border: 2px solid #1a1a1a; */
 }
