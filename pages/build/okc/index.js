@@ -3,10 +3,10 @@ import Link from "next/link";
 import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import UpButton from "../../components/UpButton/UpButton";
-import AppFooter from "../../components/AppFooter/AppFooter";
+// import UpButton from "../../components/UpButton/UpButton";
+// import AppFooter from "../../components/AppFooter/AppFooter";
 // import Okc from "../../components/Buidl/Okc/Okc";
-import WorkInProgress from "../../components/WorkInProgress/WorkInProgress";
+// import WorkInProgress from "../../components/WorkInProgress/WorkInProgress";
 
 export default function BuidlOasys(props) {
   const { t } = useTranslation("ethereum");
@@ -41,7 +41,7 @@ export default function BuidlOasys(props) {
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
+          {/* <div style={{ display: "flex", marginBottom: "10px" }}>
             <Link href="/buidl/okc" locale="en">
               <a style={{ textDecoration: "none" }}>
                 <p className="i18n-button">🇬🇧</p>
@@ -52,16 +52,16 @@ export default function BuidlOasys(props) {
                 <p className="i18n-button">🇻🇳</p>
               </a>
             </Link>
-          </div>
+          </div> */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <Link href="/">{t("back")}</Link>
             <Link href="/buidl">{t("prev")}</Link>
           </div>
-          <UpButton />
+          {/* <UpButton />
           <WorkInProgress />
           <br />
           <hr />
-          <AppFooter />
+          <AppFooter /> */}
         </div>
       </div>
     </>

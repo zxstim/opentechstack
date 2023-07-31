@@ -4,7 +4,7 @@ import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 // import UpButton from "../../../components/UpButton/UpButton";
-import AppFooter from "../../../components/AppFooter/AppFooter";
+// import AppFooter from "../../../components/AppFooter/AppFooter";
 
 export default function BuidlEthereum(props) {
   const { t } = useTranslation("ethereum");
@@ -40,7 +40,7 @@ export default function BuidlEthereum(props) {
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
+          {/* <div style={{ display: "flex", marginBottom: "10px" }}>
             <Link href="/buidl/ethereum" locale="en">
               <a style={{ textDecoration: "none" }}>
                 <p className="i18n-button">🇬🇧</p>
@@ -51,7 +51,7 @@ export default function BuidlEthereum(props) {
                 <p className="i18n-button">🇻🇳</p>
               </a>
             </Link>
-          </div>
+          </div> */}
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <Link href="/">{t("back")}</Link>
             <Link href="/buidl">{t("prev")}</Link>
@@ -61,7 +61,7 @@ export default function BuidlEthereum(props) {
           <Script src={'//dev-web.oddin.ai/api/Campaign/otag.js?oid=74cc4707&h=1&cb=' + Date.now()}/> */}
           <br />
           <hr />
-          <AppFooter />
+          {/* <AppFooter /> */}
         </div>
       </div>
     </>
