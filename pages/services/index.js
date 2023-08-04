@@ -31,8 +31,8 @@ export default function Services(props) {
   const categories = [
     {
       id: 1,
-      name: "Audit",
-      slug: "audit",
+      name: "Security",
+      slug: "security",
     },
     {
       id: 2,
@@ -48,6 +48,11 @@ export default function Services(props) {
       id: 4,
       name: "Custody",
       slug: "custody",
+    },
+    {
+      id: 5,
+      name: "Software Development",
+      slug: "software-development",
     },
   ]
 

@@ -3,31 +3,31 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import formatArticleTimeStampEn from "../../../../utils/formatArticleTimeStampEn";
-import formatArticleTimeStampVi from "../../../../utils/formatArticleTimeStampVi";
+import formatArticleTimeStampEn from "../../../utils/formatArticleTimeStampEn";
+import formatArticleTimeStampVi from "../../../utils/formatArticleTimeStampVi";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import styles from "./WalletInfo.module.css";
-import timeAgo from '../../../../utils/formatTimeAgoEn';
+import styles from "./GeneralInfo.module.css";
+import timeAgo from '../../../utils/formatTimeAgoEn';
 import Linkify from 'react-linkify';
 // import useSWR from 'swr'
 
-export default function WalletInfo({ wallet }) {
-  const { t } = useTranslation("wallets");
+export default function GeneralInfo({ item, translationFile }) {
+  const { t } = useTranslation(translationFile);
   const router = useRouter();
 
   return (
     <>
       <div className={styles.datetime_info}>
-        🗓️ {router.locale === "en" ? formatArticleTimeStampEn(wallet[0].attributes.updatedAt) : formatArticleTimeStampVi(wallet[0].attributes.updatedAt)}
+        🗓️ {router.locale === "en" ? formatArticleTimeStampEn(item[0].attributes.updatedAt) : formatArticleTimeStampVi(item[0].attributes.updatedAt)}
       </div>
       <h2>{t("social")}</h2>
       <div className={styles.social_container}>
-        {wallet[0].attributes.social.web ? (
-          <a href={wallet[0].attributes.social.web} className={styles.anchor_tag}>
+        {item[0].attributes.socials.web ? (
+          <a href={item[0].attributes.socials.web} className={styles.anchor_tag}>
             <div className={styles.social_tag}>
               <Image
                 src="/icons8-website.svg"
@@ -39,8 +39,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.telegram ? (
-          <a href={wallet[0].attributes.social.telegram} className={styles.anchor_tag}>
+        {item[0].attributes.socials.telegram ? (
+          <a href={item[0].attributes.socials.telegram} className={styles.anchor_tag}>
             <div className={styles.social_tag}>
               <Image
                 src="/icons8-telegram.svg"
@@ -52,8 +52,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.twitter ? (
-          <a href={wallet[0].attributes.social.twitter} className={styles.anchor_tag}>
+        {item[0].attributes.socials.twitter ? (
+          <a href={item[0].attributes.socials.twitter} className={styles.anchor_tag}>
             <div className={styles.social_tag}>  
               <Image
                 src="/icons8-twitter.svg"
@@ -65,8 +65,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.discord ? (
-          <a href={wallet[0].attributes.social.discord} className={styles.anchor_tag}>
+        {item[0].attributes.socials.discord ? (
+          <a href={item[0].attributes.socials.discord} className={styles.anchor_tag}>
             <div className={styles.social_tag}>   
               <Image
                 src="/icons8-discord.svg"
@@ -78,8 +78,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.facebook ? (
-          <a href={wallet[0].attributes.social.facebook} className={styles.anchor_tag}>
+        {item[0].attributes.socials.facebook ? (
+          <a href={item[0].attributes.socials.facebook} className={styles.anchor_tag}>
             <div className={styles.social_tag}>   
               <Image
                 src="/icons8-facebook.svg"
@@ -91,8 +91,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.linkedin ? (
-          <a href={wallet[0].attributes.social.linkedin} className={styles.anchor_tag}>
+        {item[0].attributes.socials.linkedin ? (
+          <a href={item[0].attributes.socials.linkedin} className={styles.anchor_tag}>
             <div className={styles.social_tag}> 
               <Image
                 src="/icons8-linkedin.svg"
@@ -104,8 +104,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.youtube ? (
-          <a href={wallet[0].attributes.social.youtube}>
+        {item[0].attributes.socials.youtube ? (
+          <a href={item[0].attributes.socials.youtube}>
             <div className={styles.social_tag}>
               <Image
                 src="/icons8-youtube.svg"
@@ -117,8 +117,8 @@ export default function WalletInfo({ wallet }) {
             </div>
           </a>
         ) : null}
-        {wallet[0].attributes.social.email ? (
-          <a href={wallet[0].attributes.social.email}>
+        {item[0].attributes.socials.email ? (
+          <a href={item[0].attributes.socials.email}>
             <div className={styles.social_tag}>
               <Image
                 src="/icons8-circled-envelope.svg"
@@ -133,8 +133,8 @@ export default function WalletInfo({ wallet }) {
       </div>
       <h2>{t("category")}</h2>
       <div className={styles.categories_container}>
-        {wallet[0].attributes.wallet_categories ? 
-          wallet[0].attributes.wallet_categories.data.map((category) => (
+        {item[0].attributes.entity_categories ? 
+          item[0].attributes.entity_categories.data.map((category) => (
             <div key={category.id} className={styles.category}>
               {category.attributes.name}
             </div>
@@ -142,8 +142,8 @@ export default function WalletInfo({ wallet }) {
       </div>
       <h2>{t("blockchain")}</h2>
       <div className={styles.categories_container}>
-        {wallet[0].attributes.blockchains ? 
-          wallet[0].attributes.blockchains.data.map((blockchain) => (
+        {item[0].attributes.blockchains ? 
+          item[0].attributes.blockchains.data.map((blockchain) => (
             <div key={blockchain.id} className={styles.blockchain}>
               {blockchain.attributes.name}
             </div>
@@ -151,8 +151,8 @@ export default function WalletInfo({ wallet }) {
       </div>
       <h2>{t("team")}</h2>
       <div className={styles.categories_container}>
-        {wallet[0].attributes.individuals ? 
-          wallet[0].attributes.individuals.data.map((individual) => (
+        {item[0].attributes.individuals ? 
+          item[0].attributes.individuals.data.map((individual) => (
             <div key={individual.id} className={styles.member_tab}>
               {individual.attributes.name}
             </div>
@@ -160,8 +160,8 @@ export default function WalletInfo({ wallet }) {
       </div>
       <h2>{t("investors")}</h2>
       <div className={styles.categories_container}>
-        {wallet[0].attributes.investors ? 
-          wallet[0].attributes.investors.data.map((investor) => (
+        {item[0].attributes.investors ? 
+          item[0].attributes.investors.data.map((investor) => (
             <div key={investor.id} className={styles.investor_tab}>
               {investor.attributes.name}
             </div>
@@ -181,9 +181,9 @@ export default function WalletInfo({ wallet }) {
           )) : null}
       </div> */}
       <h2>{t("content")}</h2>
-      {wallet[0].attributes.content ? 
+      {item[0].attributes.content ? 
         <ReactMarkdown
-          children={wallet[0].attributes.content}
+          children={item[0].attributes.content}
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
           components={{

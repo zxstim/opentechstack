@@ -35,6 +35,10 @@ module.exports = {
         destination: "/discover/communities/1"
       },
       {
+        source: "/services/security",
+        destination: "/services/security/1"
+      },
+      {
         source: "/dev-guides",
         destination: "/dev-guides/page/1"
       },

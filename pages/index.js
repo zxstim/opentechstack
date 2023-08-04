@@ -10,8 +10,8 @@ import AppFooter from "../components/AppFooter/AppFooter";
 export default function Home(props) {
   const { t } = useTranslation("common");
   const headerContent = {
-    title: "OpenTechStack.com - Explore everything about the modern tech stack",
-    description: "OpenTechStack.com is a community project aiming to be an open technical resource hub for everyone",
+    title: "OpenTechStack - Explore everything about the modern tech stack",
+    description: "OpenTechStack is a community project aiming to be an open technical resource hub for everyone",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",
     image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/8d6a2d48-99bc-485c-4afc-239196f02200/defi",
@@ -75,7 +75,7 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gap: "25px 25px",
+              gap: "20px 20px",
               gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
             }}
           >
@@ -105,14 +105,20 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gap: "25px 25px",
+              gap: "20px 20px",
               gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
             }}
           >
             <div style={buttonStyle}>
-              <Link href="/build" style={{ textDecoration: "none"}}>
+              <Link href="/build-web3" style={{ textDecoration: "none"}}>
                 <h3 style={headingStyle}>{t("title1")}</h3>
                 <p style={paragraphStyle}>{t("subtitle1")}</p>
+              </Link>
+            </div>
+            <div style={buttonStyle}>
+              <Link href="/build-web2" style={{ textDecoration: "none"}}>
+                <h3 style={headingStyle}>{t("title32")}</h3>
+                <p style={paragraphStyle}>{t("subtitle32")}</p>
               </Link>
             </div>
             <div style={buttonStyle}>
@@ -156,7 +162,7 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gap: "25px 25px",
+              gap: "20px 20px",
               gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
             }}
           >
@@ -183,7 +189,7 @@ export default function Home(props) {
           <div
             style={{
               display: "grid",
-              gap: "25px 25px",
+              gap: "20px 20px",
               gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
             }}
           >

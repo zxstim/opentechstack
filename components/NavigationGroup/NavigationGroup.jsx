@@ -45,9 +45,11 @@ export default function NavigationGroup({ paths }) {
           if (index === currentPaths.length - 1) {
             return <li key={index}>{currentPathNames[index]}</li>
           }
+          if (path.includes("info")) {
+            return <li key={index}>{currentPathNames[index]}</li>
+          }
           return <li key={index}><Link href={`/${path}`}>{currentPathNames[index]}</Link></li>
-        }
-        )
+        })
       }
     </ul>
   )

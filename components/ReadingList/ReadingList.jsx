@@ -23,7 +23,8 @@ export default function ReadingList({ articles, pagination, categories }) {
         />
         <div className={styles.reading_list_container}>
           {articles.map((article) => (
-            <div className={styles.article_container}>
+            <div key={article.id} className={styles.article_container}>
+              <Link href={`/reading/${article.attributes.slug}`} className={styles.reading_anchor_tag}>
                 <Image
                   src={article.attributes.image.data.attributes.formats.small.url}
                   alt={article.attributes.image.data.attributes.alternativeText}
@@ -57,6 +58,7 @@ export default function ReadingList({ articles, pagination, categories }) {
                     <div>{article.attributes.author.data.attributes.name}</div>
                   </div>
                 </div>
+              </Link>
             </div>
           ))}
         </div>

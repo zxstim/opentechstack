@@ -32,7 +32,7 @@ export default function build(props) {
   }
 
   const paths = {
-    fullPath: "/build",
+    fullPath: "/build-web3",
     pathNamesEn: [
       "Build on Web3"
     ],
@@ -45,62 +45,62 @@ export default function build(props) {
     {
       id: 1,
       name: "Ethereum",
-      path: "/build/ethereum",
+      path: "/build-web3/ethereum",
     },
     {
       id: 2,
       name: "Optimism",
-      path: "/build/optimism",
+      path: "/build-web3/optimism",
     },
     {
       id: 3,
       name: "Arbitrum",
-      path: "/build/arbitrum",
+      path: "/build-web3/arbitrum",
     },
     {
       id: 4,
       name: "Base",
-      path: "/build/base",
+      path: "/build-web3/base",
     },
     {
       id: 5,
       name: "Starknet",
-      path: "/build/starknet",
+      path: "/build-web3/starknet",
     },
     {
       id: 6,
       name: "Klaytn",
-      path: "/build/klaytn",
+      path: "/build-web3/klaytn",
     },
     {
       id: 7,
       name: "Gnosis Chain",
-      path: "/build/gnosis",
+      path: "/build-web3/gnosis",
     },
     {
       id: 8,
       name: "Polygon",
-      path: "/build/polygon",
+      path: "/build-web3/polygon",
     },
     {
       id: 9,
       name: "BNB Chain",
-      path: "/build/bnbchain",
+      path: "/build-web3/bnbchain",
     },
     {
       id: 10,
       name: "OKC",
-      path: "/build/okc",
+      path: "/build-web3/okc",
     },
     {
       id: 11,
       name: "Oasys",
-      path: "/build/oasys",
+      path: "/build-web3/oasys",
     },
     {
       id: 12,
       name: "Nym",
-      path: "/build/nym",
+      path: "/build-web3/nym",
     },
   ]
 
