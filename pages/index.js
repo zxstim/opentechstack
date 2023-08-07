@@ -69,8 +69,30 @@ export default function Home(props) {
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title")}</h1>
-          <div className="subtitle">{t("subtitle")}</div>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "16px",
+          }}>
+            <Image
+              src="/opentechstack-main.svg"
+              alt="OpenTechStack"
+              width={40}
+              height={40}
+            />
+            <h1 
+              id="top" 
+              style={{
+              width: "100%",
+            }}>
+              OpenTechStack
+            </h1>
+          </div>
+          <AlertMessage
+            type="info"
+            headline="Hey there! 👋"
+            message={t("subtitle")}
+          />
           <AlertMessage 
             type="special"
             headline="Looking for Defi.vn?"
