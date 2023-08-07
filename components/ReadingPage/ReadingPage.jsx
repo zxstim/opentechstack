@@ -56,10 +56,10 @@ export default function ReadingPage({ article }) {
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
         components={{
-            code({ node, inline, className, children, ...props }) {
+          code({ node, inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");
             return !inline && match ? (
-                <SyntaxHighlighter
+              <SyntaxHighlighter
                 children={String(children).replace(/\n$/, "")}
                 style={github}
                 language={match[1]}
@@ -67,11 +67,11 @@ export default function ReadingPage({ article }) {
                 {...props}
                 />
             ) : (
-                <code className={className} {...props}>
+              <code className={className} {...props}>
                 {children}
-                </code>
+              </code>
             );
-            },
+          },
         }}
       />
     </>

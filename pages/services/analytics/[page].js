@@ -84,16 +84,11 @@ export default function SecurityPage({ entities, pagination }) {
 // }
 
 export async function getServerSideProps(context) {
-
-  // const walletCategoriesRes = await fetchStrapiAPI("/wallet-categories", {
-  //   locale: "all",
-  //   sort: "name:asc",
-  // })
   const entitiesRes = await fetchStrapiAPI("/entities", {
     filters: {
       entity_categories: {
         slug: {
-          $in: "security",
+          $in: "analytics",
         },
       },
     },

@@ -22,7 +22,11 @@ export default function WalletInfo({ wallet }) {
   return (
     <>
       <div className={styles.datetime_info}>
-        🗓️ {router.locale === "en" ? formatArticleTimeStampEn(wallet[0].attributes.updatedAt) : formatArticleTimeStampVi(wallet[0].attributes.updatedAt)}
+        🗓️ {
+          router.locale === "en" ? 
+          formatArticleTimeStampEn(wallet[0].attributes.updatedAt) : 
+          formatArticleTimeStampVi(wallet[0].attributes.updatedAt)
+        }
       </div>
       <h2>{t("social")}</h2>
       <div className={styles.social_container}>

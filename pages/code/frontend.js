@@ -1,62 +1,42 @@
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
+import Header from "../../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import UpButton from "../../components/UpButton/UpButton";
 import AppFooter from "../../components/AppFooter/AppFooter";
 import Frontend from "../../components/LearnToCode/Frontend/Frontend";
+import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../components/NavigationGroup/NavigationGroup";
 
-export default function CodeFrontend(props) {
+export default function CodeBlockchain(props) {
   const { t } = useTranslation("frontend");
+
+  const headerContent = {
+    title: "Frontend roadmap and resources - OpenTechStack.com",
+    description: "Check out the roadmap to become frontend developers and all the resources for you to learn.",
+    icon: "../opentechstack.svg",
+    domain: "https://www.OpenTechStack.com",
+    image: "https://opentechstack.com/defi.svg",
+  }
+
+  const paths = {
+    fullPath: "/code/blockchain",
+    pathNamesEn: [
+      "Code",
+      "Blockchain"
+    ],
+    pathNamesVi: [
+      "Code",
+      "Blockchain"
+    ],
+  }
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>Frontend roadmap and resources | Hành trình học Frontend và tài liệu - OpenTechStack.com</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="../../defi.svg" />
-        <meta name="description" content="Check out the roadmap to become Frontend developers and all the resources for you to learn." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Frontend roadmap and resources | Hành trình học Frontend và tài liệu - OpenTechStack.com" key="ogtitle" />
-        <meta property="og:description" content="Check out the roadmap to become Frontend developers and all the resources for you to learn." key="ogdesc" />
-        <meta property="og:url" content="https://OpenTechStack.com/code/frontend" key="ogurl" />
-        <meta property="og:site_name" content="OpenTechStack.com | DeFi Vietnam" key="ogsitename" />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href="/code/frontend" locale="en">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-              </a>
-            </Link>
-            <Link href="/code/frontend" locale="vi">
-              <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-              </a>
-            </Link>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <Link href="/">{t("back")}</Link>
-            <Link href="/code">{t("prev")}</Link>
-          </div>
-          <UpButton />
+          <LanguageSelector />
+          <NavigationGroup paths={paths} />
           <h2>{t("subtitle")}</h2>
           <Frontend />
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>

@@ -125,7 +125,7 @@ export async function getServerSideProps(context) {
         fields: ["name", "slug", "locale"],
       }
     },
-    locale: "all"
+    locale: "en"
   });
 
   return {

@@ -122,7 +122,7 @@ export async function getServerSideProps(context) {
         fields: ["message", "publishedAt", "locale"],
       }
     },
-    locale: "en"
+    locale: "all"
   });
 
   return {

@@ -38,7 +38,6 @@ export default function WalletsList({ wallets, pagination, walletCategories }) {
         />
         <div className={styles.wallets_container}>
           {wallets.map((wallet) => (
-            router.locale === "en" && wallet.attributes.locale === "en" ?
             <div key={wallet.id} className={styles.wallets_item}>
               <div className={styles.wallets_item_info}>
                 <div className={styles.image_name_container}>
@@ -164,134 +163,7 @@ export default function WalletsList({ wallets, pagination, walletCategories }) {
                   <div className={styles.cta_learn_more}>{t("cta")}</div>
                 </Link>
               </div>
-            </div> :
-            router.locale === "vi" && wallet.attributes.locale === "vi" ?
-            <div key={wallet.id} className={styles.wallets_item}>
-              <div className={styles.wallets_item_info}>
-                <div className={styles.image_name_container}>
-                  <Image 
-                    src={wallet.attributes.logo.data.attributes.formats.thumbnail.url}
-                    alt={wallet.attributes.logo.alternativeText}
-                    width={40}
-                    height={40}
-                  />
-                  <div className={styles.wallets_item_title}>
-                    {wallet.attributes.name}
-                  </div>
-                </div>
-              <div className={styles.wallets_item_tech_badge_container}>
-                {wallet.attributes.wallet_categories.data.map((tag) => (
-                  <div key={tag.id} className={styles.wallets_item_tech}>
-                    {tag.attributes.name}
-                  </div> 
-                  ))
-                }
-              </div>
             </div>
-            <div className={styles.wallets_cta_container}>
-              <div className={styles.wallets_social_container}>
-                {wallet.attributes.social.web ? (
-                  <div>
-                    <a href={wallet.attributes.social.web}>
-                      <Image
-                        src="/icons8-website.svg"
-                        alt="Web icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.telegram ? (
-                  <div>
-                    <a href={wallet.attributes.social.telegram}>
-                      <Image
-                        src="/icons8-telegram.svg"
-                        alt="Telegram icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.twitter ? (
-                  <div>
-                    <a href={wallet.attributes.social.twitter}>
-                      <Image
-                        src="/icons8-twitter.svg"
-                        alt="Twitter icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.discord ? (
-                  <div>
-                    <a href={wallet.attributes.social.discord}>
-                      <Image
-                        src="/icons8-discord.svg"
-                        alt="Discord icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.facebook ? (
-                  <div>
-                    <a href={wallet.attributes.social.facebook}>
-                      <Image
-                        src="/icons8-facebook.svg"
-                        alt="Email icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.linkedin ? (
-                  <div>
-                    <a href={wallet.attributes.social.linkedin}>
-                      <Image
-                        src="/icons8-linkedin.svg"
-                        alt="Linkedin icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.youtube ? (
-                  <div>
-                    <a href={wallet.attributes.social.youtube}>
-                      <Image
-                        src="/icons8-youtube.svg"
-                        alt="Linkedin icon"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </div>
-                ) : null}
-                {wallet.attributes.social.email ? (
-                  <span>
-                    <a href={wallet.attributes.social.email}>
-                      <Image
-                        src="/icons8-circled-envelope.svg"
-                        alt="Email icon"
-                        width={32}
-                        height={32}
-                      />
-                    </a>
-                  </span>
-                ) : null}
-              </div>
-              <Link href={`/discover/wallets/info/${wallet.attributes.slug}`} style={{ textDecoration: "none", color: "#000000" }}>
-                <div className={styles.cta_learn_more}>{t("cta")}</div>
-              </Link>
-            </div>
-          </div> : null
           ))}
         </div>
         <PaginatedList

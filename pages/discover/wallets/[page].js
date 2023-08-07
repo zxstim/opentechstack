@@ -103,7 +103,7 @@ export async function getServerSideProps(context) {
         sort: ["name:asc"],
       },
     },
-    locale: "all", 
+    locale: "en", 
     pagination: {
       page: context.query.page,
       pageSize: 60,

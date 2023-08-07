@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styles from "./LanguageSelector.module.css";
 
-export default function LangSelector() {
+export default function LanguageSelector() {
   const router = useRouter();
   const currentPath = router.asPath;
   const [currentLanguage, setCurrentLanguage] = useState(router.locale);

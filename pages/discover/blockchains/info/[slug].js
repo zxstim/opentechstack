@@ -1,6 +1,5 @@
-import Head from "next/head";
+import Header from "../../../../components/Header/Header";
 import Link from "next/link";
-import Script from "next/script";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import constructSlug from "../../../../utils/constructSlug";
@@ -9,46 +8,43 @@ import { useTranslation } from "next-i18next";
 import { fetchStrapiAPI } from "../../../../lib/api";
 import AppFooter from "../../../../components/AppFooter/AppFooter";
 import BlockchainInfo from "../../../../components/DiscoverList/BlockchainsList/BlockchainInfo/BlockchainInfo";
+import LanguageSelector from "../../../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../../../components/NavigationGroup/NavigationGroup";
 
 export default function BlockchainInfoPage({ blockchain }) {
   const { t } = useTranslation("blockchains");
-  const router = useRouter();
+
+  const headerContent = {
+    title: `${blockchain[0].attributes.name} - OpenTechStack.com`,
+    description: `Learn about ${blockchain[0].attributes.name}`,
+    icon: blockchain[0].attributes.logo.data.attributes.formats.thumbnail.url,
+    domain: "https://www.OpenTechStack.com",
+    image: blockchain[0].attributes.logo.data.attributes.formats.thumbnail.url,
+  }
+
+  const paths = {
+    fullPath: `/discover/blockchains/info/${blockchain[0].attributes.slug}`,
+    pathNamesEn: [
+      "Discover",
+      "Blockchains",
+      "Info",
+      blockchain[0].attributes.name
+    ],
+    pathNamesVi: [
+      "Khám phá",
+      "Blockchain",
+      "Thông tin",
+      blockchain[0].attributes.name
+    ],
+  }
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>{`${blockchain[0].attributes.name} - OpenTechStack.com`}</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href={blockchain[0].attributes.logo.data.attributes.formats.thumbnail.url} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={`${blockchain[0].attributes.name} - OpenTechStack.com`} />
-        <meta property="og:description" content={`Learn about ${blockchain[0].attributes.name}`} />
-        <meta property="og:url" content={`https://www.OpenTechStack.com/${blockchain[0].attributes.locale}/discover/blockchains${blockchain[0].attributes.slug}`} />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content={blockchain[0].attributes.logo.data.attributes.formats.thumbnail.url} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content={`https://www.OpenTechStack.com/${blockchain[0].attributes.locale}/discover/blockchains${blockchain[0].attributes.slug}`} />
-        <meta name="twitter:title" content={`${blockchain[0].attributes.name} - OpenTechStack.com`} />
-        <meta name="twitter:description" content={`Learn about ${blockchain[0].attributes.name}`} />
-        <meta name="twitter:image" content={blockchain[0].attributes.logo.data.attributes.formats.thumbnail.url} />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
+          <LanguageSelector />
+          <NavigationGroup paths={paths} />
           <div style={{
             display: "flex",
             flexDirection: "row",
@@ -73,22 +69,6 @@ export default function BlockchainInfoPage({ blockchain }) {
               }}
             >{blockchain[0].attributes.name}</h1>
           </div>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href={`/discover/blockchains/info/${constructSlug(blockchain[0].attributes.slug).slugEn}`} locale="en">
-            <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-            </a>
-            </Link>
-            <Link href={`/discover/blockchains/info/${constructSlug(blockchain[0].attributes.slug).slugVi}`} locale="vi">
-            <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-            </a>
-            </Link>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px", width: "fit-content" }}>
-              <Link href="/">{t("back")}</Link>
-              <Link href="/discover/blockchains">{t("prev")}</Link>
-          </div>
           <BlockchainInfo blockchain={blockchain}/>
           <br />
           <hr />
@@ -101,16 +81,6 @@ export default function BlockchainInfoPage({ blockchain }) {
 
 
 export async function getServerSideProps(context) {
-  // var slug;
-  // var slug_vi;
- 
-  // if (context.query.slug.split("-").pop() === "vi") {
-  //   slug_vi = context.query.slug;
-  //   slug = context.query.slug.split("-")[0];
-  // } else {
-  //   slug = context.query.slug;
-  //   slug_vi = context.query.slug + "-vi";
-  // }
   const { slug } = context.query
 
   const blockchainRes = await fetchStrapiAPI("/blockchains", {
@@ -125,13 +95,13 @@ export async function getServerSideProps(context) {
         fields: ["name", "slug", "locale"],
       }
     },
-    locale: "all"
+    locale: "en"
   });
 
   return {
     props: { 
-        blockchain: blockchainRes.data,
-        ...(await serverSideTranslations(context.locale, ["common", "blockchains"])) 
+      blockchain: blockchainRes.data,
+      ...(await serverSideTranslations(context.locale, ["common", "blockchains"])) 
     },
   };
 }

@@ -45,6 +45,10 @@ module.exports = {
       {
         source: "/reading",
         destination: "/reading/page/1"
+      },
+      {
+        source: "/build-web3",
+        destination: "/build-web3/1"
       }
     ]
   },

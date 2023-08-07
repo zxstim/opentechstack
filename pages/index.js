@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
 import Header from "../components/Header/Header";
 import AppFooter from "../components/AppFooter/AppFooter";
+import AlertMessage from "../components/AlertMessage/AlertMessage";
 // import { fetchStrapiAPI } from "../lib/api";
 
 export default function Home(props) {
@@ -70,6 +71,11 @@ export default function Home(props) {
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <div className="subtitle">{t("subtitle")}</div>
+          <AlertMessage 
+            type="special"
+            headline="Looking for Defi.vn?"
+            message="We have rebranded as OpenTechStack to better reflect our mission to be an open technical resource hub for everyone."
+          />
           <LanguageSelector />
           <h2>{t("section-4")}</h2>
           <div
@@ -281,10 +287,12 @@ export default function Home(props) {
 export async function getStaticProps({ locale }) {
   
   // const announcementsRes = await fetchStrapiAPI("/announcements", { populate: ["image"] })
+  // const thumbnailRes = await fetchStrapiAPI("/page-thumbnails", { populate: ["thumbnail"] })
 
   return {
     props: {
       // announcements: announcementsRes.data,
+      // thumbnail: thumbnailRes.data,
       ...(await serverSideTranslations(locale, ["common"])),
       // Will be passed to the page component as props
     },

@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { useState } from "react";
-import { useRouter } from "next/router";
 import contents from "./Backend.json";
 import TitleModal from "../../TitleModal/TitleModal";
 import SubtitleModal from "../../SubtitleModal/SubtitleModal";

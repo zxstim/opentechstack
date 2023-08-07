@@ -166,6 +166,7 @@
   font-weight: bold;
   text-transform: uppercase;
   width: fit-content;
+  border: 2px solid #1a1a1a;
 }
 
 .blockchains_item_tech_container {
@@ -189,6 +190,7 @@
   font-weight: bold;
   text-transform: uppercase;
   width: fit-content;
+  border: 2px solid #1a1a1a;
 }
 
 .blockchains_load_more_button {

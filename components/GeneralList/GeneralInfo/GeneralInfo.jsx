@@ -22,7 +22,11 @@ export default function GeneralInfo({ item, translationFile }) {
   return (
     <>
       <div className={styles.datetime_info}>
-        🗓️ {router.locale === "en" ? formatArticleTimeStampEn(item[0].attributes.updatedAt) : formatArticleTimeStampVi(item[0].attributes.updatedAt)}
+        🗓️ {
+          router.locale === "en" ? 
+          formatArticleTimeStampEn(item[0].attributes.updatedAt) : 
+          formatArticleTimeStampVi(item[0].attributes.updatedAt)
+        }
       </div>
       <h2>{t("social")}</h2>
       <div className={styles.social_container}>
@@ -181,31 +185,31 @@ export default function GeneralInfo({ item, translationFile }) {
           )) : null}
       </div> */}
       <h2>{t("content")}</h2>
-      {item[0].attributes.content ? 
-        <ReactMarkdown
-          children={item[0].attributes.content}
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeRaw]}
-          components={{
-            code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || "");
-            return !inline && match ? (
-                <SyntaxHighlighter
-                children={String(children).replace(/\n$/, "")}
-                style={github}
-                language={match[1]}
-                PreTag="div"
-                {...props}
-                />
-              ) : (
-                <code className={className} {...props}>
-                {children}
-                </code>
-              );
-            },
-          }}
-        /> 
-      : null}
+        {item[0].attributes.content ? 
+          <ReactMarkdown
+            children={item[0].attributes.content}
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
+              code({ node, inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || "");
+              return !inline && match ? (
+                  <SyntaxHighlighter
+                  children={String(children).replace(/\n$/, "")}
+                  style={github}
+                  language={match[1]}
+                  PreTag="div"
+                  {...props}
+                  />
+                ) : (
+                  <code className={className} {...props}>
+                  {children}
+                  </code>
+                );
+              },
+            }}
+          /> 
+        : null}
     </>
   );
 }

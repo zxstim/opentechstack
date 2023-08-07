@@ -2,55 +2,50 @@ import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import Header from "../../../../components/Header/Header";
 import constructSlug from "../../../../utils/constructSlug";
-import formatArticleTimeStampEn from "../../../../utils/formatArticleTimeStampEn";
-import formatArticleTimeStampVi from "../../../../utils/formatArticleTimeStampVi";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { fetchStrapiAPI } from "../../../../lib/api";
 import AppFooter from "../../../../components/AppFooter/AppFooter";
+import LanguageSelector from "../../../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../../../components/NavigationGroup/NavigationGroup";
 import WalletInfo from "../../../../components/DiscoverList/WalletsList/WalletInfo/WalletInfo";
 
 export default function WalletInfoPage({ wallet }) {
   const { t } = useTranslation("wallets");
-  const router = useRouter();
+  
+  const headerContent = {
+    title: `${wallet[0].attributes.name} - OpenTechStack.com`,
+    description: `Learn about ${wallet[0].attributes.name}`,
+    icon: wallet[0].attributes.logo.data.attributes.formats.thumbnail.url,
+    domain: "https://www.OpenTechStack.com",
+    image: wallet[0].attributes.logo.data.attributes.formats.thumbnail.url,
+  }
+
+  const paths = {
+    fullPath: `/discover/wallets/info/${wallet[0].attributes.slug}`,
+    pathNamesEn: [
+      "Discover",
+      "Wallets",
+      "Info",
+      wallet[0].attributes.name
+    ],
+    pathNamesVi: [
+      "Khám phá",
+      "Ví",
+      "Thông tin",
+      wallet[0].attributes.name
+    ],
+  }
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-B3Z17PVC6F"
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-B3Z17PVC6F');
-          `}
-      </Script>
-      <Head>
-        <title>{`${wallet[0].attributes.name} - OpenTechStack.com`}</title>
-        <meta charSet="utf-8" />
-        <link rel="icon" href={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content={`${wallet[0].attributes.name} - OpenTechStack.com`} />
-        <meta property="og:description" content={`Learn about ${wallet[0].attributes.name}`} />
-        <meta property="og:url" content={`https://www.OpenTechStack.com/${wallet[0].attributes.locale}/discover/wallets/info/${wallet[0].attributes.slug}`} />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="OpenTechStack.com" />
-        <meta property="twitter:url" content={`https://www.OpenTechStack.com/${wallet[0].attributes.locale}/discover/wallets/info/${wallet[0].attributes.slug}`} />
-        <meta name="twitter:title" content={`${wallet[0].attributes.name} - OpenTechStack.com`} />
-        <meta name="twitter:description" content={`Learn about ${wallet[0].attributes.name}`} />
-        <meta name="twitter:image" content={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url} />
-      </Head>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
+          <LanguageSelector />
+          <NavigationGroup paths={paths} />
           <div style={{
             display: "flex",
             flexDirection: "row",
@@ -74,22 +69,6 @@ export default function WalletInfoPage({ wallet }) {
               }}
             >{wallet[0].attributes.name}</h1>
           </div>
-          <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href={`/discover/wallets/info/${constructSlug(wallet[0].attributes.slug).slugEn}`} locale="en">
-            <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-            </a>
-            </Link>
-            <Link href={`/discover/wallets/info/${constructSlug(wallet[0].attributes.slug).slugVi}`} locale="vi">
-            <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-            </a>
-            </Link>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px", width: "fit-content" }}>
-              <Link href="/">{t("back")}</Link>
-              <Link href="/discover/wallets">{t("prev")}</Link>
-          </div>
           <WalletInfo wallet={wallet}/>
           <br />
           <hr />
@@ -102,16 +81,6 @@ export default function WalletInfoPage({ wallet }) {
 
 
 export async function getServerSideProps(context) {
-  // var slug;
-  // var slug_vi;
- 
-  // if (context.query.slug.split("-").pop() === "vi") {
-  //   slug_vi = context.query.slug;
-  //   slug = context.query.slug.split("-")[0];
-  // } else {
-  //   slug = context.query.slug;
-  //   slug_vi = context.query.slug + "-vi";
-  // }
   const { slug } = context.query
 
   const walletsRes = await fetchStrapiAPI("/wallets", {
@@ -138,7 +107,7 @@ export async function getServerSideProps(context) {
         fields: ["message", "publishedAt", "locale"],
       }
     },
-    locale: "all"
+    locale: "en"
   });
 
   return {

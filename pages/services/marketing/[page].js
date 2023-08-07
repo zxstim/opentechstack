@@ -1,37 +1,36 @@
 import Header from "../../../components/Header/Header";
-import Link from "next/link";
-import Script from "next/script";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import FloatingButton from "../../../components/FloatingButton/FloatingButton"
 import AppFooter from "../../../components/AppFooter/AppFooter";
+import GeneralList from "../../../components/GeneralList/GeneralList";
+import { fetchStrapiAPI } from "../../../lib/api";
 import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
-import BlockchainsList from "../../../components/DiscoverList/BlockchainsList/BlockchainsList";
-import { fetchStrapiAPI } from "../../../lib/api";
 
-export default function Blockchains({ blockchains, pagination }) {
-  const { t } = useTranslation("blockchains");
+export default function SecurityPage({ entities, pagination }) {
+  const { t } = useTranslation("security");
 
   const headerContent = {
-    title: "Discover Blockchains - OpenTechStack.com",
-    description: "Learn everything about Blockchains, their teams, investors and their ecosystem.",
+    title: "How to use Web3 Wallets - OpenTechStack.com",
+    description: "Learn everything about web3 wallets, including setup guide, security practices, what can you use the wallets for and many more topics.",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",
-    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/81ca8408-15be-47c1-d0de-394725249700/defi",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/93f92267-0ff6-4ef9-45c4-060ea1b95400/defi",
   }
 
   const paths = {
-    fullPath: "/discover/blockchains",
+    fullPath: "/services/security",
     pathNamesEn: [
-      "Discover",
-      "Blockchains"
+      "Services",
+      "Security"
     ],
     pathNamesVi: [
-      "Khám phá",
-      "Blockchains"
+      "Dịch vụ",
+      "Bảo mật"
     ],
   }
+
 
   return (
     <>
@@ -43,10 +42,11 @@ export default function Blockchains({ blockchains, pagination }) {
           <NavigationGroup paths={paths} />
           <FloatingButton />
           <h2>{t("subtitle")}</h2>
-          <BlockchainsList 
-            blockchains={blockchains} 
-            pagination={pagination} 
-            // blockchainCategories={blockchainCategories}
+          <GeneralList 
+            items={entities} 
+            pagination={pagination}
+            translationFile="security"
+            indexPagePath="services/security"
             />
           <br />
           <hr />
@@ -59,21 +59,24 @@ export default function Blockchains({ blockchains, pagination }) {
 
 export async function getServerSideProps(context) {
 
-  // const blockchainCategoriesRes = await fetchStrapiAPI("/blockchain-categories", {
-  //   locale: "all",
-  //   sort: "name:asc",
-  // })
-  const blockchainsRes = await fetchStrapiAPI("/blockchains", {
+  const entitiesRes = await fetchStrapiAPI("/entities", {
+    filters: {
+      entity_categories: {
+        slug: {
+          $in: "marketing",
+        },
+      },
+    },
     fields: [
       "name", 
-      "social", 
+      "socials", 
       "updatedAt", 
       "slug", 
       "locale"
     ],   
     populate: {
       logo: "*",
-      blockchain_categories: {
+      entity_categories: {
         fields: ["name", "slug", "locale"],
         sort: ["name:asc"],
       }, 
@@ -92,10 +95,10 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      blockchains: blockchainsRes.data,
-      pagination: blockchainsRes.meta.pagination,
-      // blockchainCategories: blockchainCategoriesRes.data,
-      ...(await serverSideTranslations(context.locale, ["common", "blockchains"])),
+      entities: entitiesRes.data,
+      pagination: entitiesRes.meta.pagination,
+      // walletCategories: walletCategoriesRes.data,
+      ...(await serverSideTranslations(context.locale, ["common", "security"])),
       // Will be passed to the page component as props
     },
   };
