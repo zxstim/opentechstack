@@ -14,21 +14,21 @@ export default function KlaytnBuildSummary() {
       <AlertMessage 
         type="info"
         headline="Need more information?" 
-        message="Read the full article about Ethereum [here](https://opentechstack.com/reading/what-is-ethereum)."
+        message="Read the full article about Ethereum [here ➡️](https://opentechstack.com/reading/what-is-ethereum)"
         markdown={true}
       />
       <p>Ethereum can be used to build the followings</p>
       <h2>Roadmap to becoming an Ethereum Developer</h2>
       <p>Congratulations, knowledge-seeker! You've stumbled upon your very own treasure map in the realm of learning. Our team has meticulously crafted this roadmap to be your trusty guide through the vast landscape of knowledge. From the foothills of basics to the peaks of expertise, this path is sprinkled with practical tools and fascinating insights. It's like having a GPS for your brain, leading you through the labyrinth of learning with finesse and flair. So buckle up, fasten your seatbelt, and let's navigate this intellectual adventure together. Get ready to unlock the secrets of learning and level up like a pro! Happy trails!</p>
       <Link 
-        href="/build/ethereum/dev-roadmap"
+        href="/build-web3/ethereum/developer-roadmap"
         >
         Go to Roadmap ➡️
       </Link>
       <h2>Build on Ethereum</h2>
       <p>We take pride in our dedication to empowering developers like you with the most comprehensive and up-to-date resources. As trailblazers in the realm of blockchain technology, we have meticulously compiled a vast collection of guides for popular smart contract designs, patterns, and top-notch security practices. Whether you're a seasoned developer or a curious newcomer, these guides are your compass to navigate the intricacies of smart contract development with confidence and ease. From battle-tested best practices to innovative approaches, we've got you covered. So, dive in, explore, and let our treasure trove of wisdom fuel your journey towards building secure and groundbreaking decentralized applications. The future of blockchain development awaits, and we're thrilled to be your faithful guide on this exhilarating quest!</p>
       <Link 
-        href="/build/ethereum/dev-library"
+        href="/build-web3/ethereum/developer-library"
         >
         Go to Library ➡️
       </Link>
