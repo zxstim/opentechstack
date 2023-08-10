@@ -16,7 +16,7 @@ export default function PaginatedList({ currentPage, totalItems, totalPages, ind
           <div key={index} className={styles.active_page}>{page}</div>
         ) : (page === 1) ? (
           <Link key={index} href={`/${indexPagePath}`}>
-            <a>{page}</a>
+            {page}
           </Link>
         ) : (page === currentPage) ? (
           <div key={index} className={styles.active_page}>{page}</div>
@@ -24,7 +24,7 @@ export default function PaginatedList({ currentPage, totalItems, totalPages, ind
           <div key={index}>{page}</div>
         ) : (
           <Link key={index} href={`${page}`}>
-            <a>{page}</a>
+            {page}
           </Link>
       )))
       }

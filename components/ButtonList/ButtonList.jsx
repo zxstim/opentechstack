@@ -31,7 +31,7 @@ export default function ButtonList({ items, translationFile, indexPagePath, pagi
               className={styles.anchor}
               >
               <div className={styles.container}>
-                {item.attributes.logo.data.attributes.formats.thumbnail.url ?
+                {item.attributes.logo ?
                   <Image 
                     src={item.attributes.logo.data.attributes.formats.thumbnail.url}
                     alt={item.attributes.logo.alternativeText}
@@ -44,11 +44,13 @@ export default function ButtonList({ items, translationFile, indexPagePath, pagi
                 </div>
               </div>
               <div className={styles.tags_container}>
-                {item.attributes.blockchain_categories.data.map((tag) => (
-                  <div key={tag.id} className={styles.tag}>
-                    {tag.attributes.name}
-                  </div> 
-                  ))}
+                {item.attributes.blockchain_categories ?
+                  item.attributes.blockchain_categories.data.map((tag) => (
+                    <div key={tag.id} className={styles.tag}>
+                      {tag.attributes.name}
+                    </div> 
+                  )) : null
+                }
               </div>
               <div className={styles.description}>
                 {item.attributes.description}

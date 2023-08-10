@@ -72,7 +72,7 @@ export default function Home(props) {
           <div style={{
             display: "flex",
             alignItems: "center",
-            gap: "16px",
+            gap: "8px",
           }}>
             <Image
               src="/opentechstack-main.svg"
@@ -90,12 +90,12 @@ export default function Home(props) {
           </div>
           <AlertMessage
             type="info"
-            headline="Hey there! 👋"
+            headline="👋 Hey there!"
             message={t("subtitle")}
           />
           <AlertMessage 
             type="special"
-            headline="Looking for Defi.vn?"
+            headline="👀 Looking for Defi.vn?"
             message="We have rebranded as OpenTechStack to better reflect our mission to be an open technical resource hub for everyone."
           />
           <LanguageSelector />

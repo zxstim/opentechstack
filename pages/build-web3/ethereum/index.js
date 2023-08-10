@@ -36,7 +36,7 @@ export default function BuildEthereum(props) {
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title")}</h1>
+          <h1 id="top">Ethereum</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
           <EthereumBuildSummary />

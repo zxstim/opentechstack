@@ -57,14 +57,17 @@ export default function CommunityInfoPage({ community }) {
           }}>
             {community[0].attributes.logo.data.attributes.formats.thumbnail.url ? 
               <div style={{
-                width: "80px",
-                height: "80px",
+                width: "90px",
+                height: "90px",
               }}>
                 <Image 
                   src={community[0].attributes.logo.data.attributes.formats.thumbnail.url}
                   alt={community[0].attributes.logo.alternativeText}
                   width={80}
                   height={80}
+                  style={{
+                    borderRadius: "8px",
+                  }}
                 />
               </div> : null}
             <h1

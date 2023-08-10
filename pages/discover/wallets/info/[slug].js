@@ -53,14 +53,17 @@ export default function WalletInfoPage({ wallet }) {
             alignItems: "center"
           }}>
             <div style={{
-              width: "80px",
-              height: "80px",
+              width: "90px",
+              height: "90px",
             }}>
               <Image 
                 src={wallet[0].attributes.logo.data.attributes.formats.thumbnail.url}
                 alt={wallet[0].attributes.logo.alternativeText}
                 width={80}
                 height={80}
+                style={{
+                  borderRadius: "8px",
+                }}
               />
             </div>
             <h1

@@ -1,14 +1,13 @@
-import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import FloatingButton from "../../components/FloatingButton/FloatingButton"
 import AppFooter from "../../components/AppFooter/AppFooter";
 import InvestorList from "../../components/InvestorList/InvestorList";
 import NavigationGroup from "../../components/NavigationGroup/NavigationGroup";
 import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 import { fetchStrapiAPI } from "../../lib/api";
+// import ButtonList from "../../components/ButtonList/ButtonList";
 
-export default function Investors({ investors, pagination, investorCategories }) {
+export default function Investors({ investors, pagination }) {
   const { t } = useTranslation("investors");
   const headerContent = {
     title: "Global investors list - OpenTechStack.com",
@@ -35,10 +34,13 @@ export default function Investors({ investors, pagination, investorCategories })
           <h1 id="top">{t("title")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
-          <Link href="/">{t("back")}</Link>
-          <FloatingButton />
           <h2>{t("subtitle")}</h2>
-          <InvestorList investorList={investors} pagination={pagination} investorsCategories={investorCategories}/>
+          <InvestorList 
+            items={investors} 
+            pagination={pagination} 
+            translationFile="investors"
+            indexPagePath="/investors"
+            />
           <br />
           <hr />
           <AppFooter />
@@ -51,11 +53,11 @@ export default function Investors({ investors, pagination, investorCategories })
 
 export async function getServerSideProps(context) {
 
-  const investorCategoriesRes = await fetchStrapiAPI("/investor-categories")
+  // const investorCategoriesRes = await fetchStrapiAPI("/investor-categories")
   const investorsRes = await fetchStrapiAPI("/investors", { 
 		fields: [
       "name", 
-      "social"
+      "description"
     ], 
     populate: [
       "investor_categories"
@@ -71,7 +73,7 @@ export async function getServerSideProps(context) {
     props: {
       investors: investorsRes.data,
       pagination: investorsRes.meta.pagination,
-      investorCategories: investorCategoriesRes.data,
+      // investorCategories: investorCategoriesRes.data,
       ...(await serverSideTranslations(context.locale, ["common", "investors"])),
       // Will be passed to the page component as props
     },
