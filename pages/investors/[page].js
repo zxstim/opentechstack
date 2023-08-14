@@ -64,8 +64,7 @@ export async function getServerSideProps(context) {
       "updatedAt", 
       "slug", 
     ], 
-    populate:{
-      logo: "*",
+    populate: {
       investor_categories: {
         fields: ["name", "slug"],
         sort: ["name:asc"],
