@@ -34,7 +34,7 @@ export default function ButtonList({ items, translationFile, indexPagePath, pagi
                 {item.attributes.logo ?
                   <Image 
                     src={item.attributes.logo.data.attributes.formats.thumbnail.url}
-                    alt={item.attributes.logo.alternativeText}
+                    alt="Investor logo"
                     width={40} 
                     height={40}
                     className={styles.logo}

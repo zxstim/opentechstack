@@ -64,9 +64,13 @@ export async function getServerSideProps(context) {
       "updatedAt", 
       "slug", 
     ], 
-    populate: [
-      "investor_categories"
-    ], 
+    populate:{
+      logo: "*",
+      investor_categories: {
+        fields: ["name", "slug"],
+        sort: ["name:asc"],
+      },
+    },
     pagination: {
       page: context.query.page,
       pageSize: 60,
