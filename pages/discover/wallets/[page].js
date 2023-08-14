@@ -42,7 +42,11 @@ export default function Wallets({ wallets, pagination, walletCategories }) {
           <NavigationGroup paths={paths} />
           <FloatingButton />
           <h2>{t("subtitle")}</h2>
-          <WalletsList wallets={wallets} pagination={pagination} walletCategories={walletCategories}/>
+          <WalletsList 
+            wallets={wallets} 
+            pagination={pagination} 
+            walletCategories={walletCategories}
+          />
           <br />
           <hr />
           <AppFooter />

@@ -1,7 +1,8 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import AppFooter from "../../components/AppFooter/AppFooter";
-import InvestorList from "../../components/InvestorList/InvestorList";
+import ButtonList from "../../components/InvestorList/InvestorList";
+import Header from "../../components/Header/Header";
 import NavigationGroup from "../../components/NavigationGroup/NavigationGroup";
 import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 import { fetchStrapiAPI } from "../../lib/api";
@@ -29,13 +30,14 @@ export default function Investors({ investors, pagination }) {
 
   return (
     <>
+      <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
           <h1 id="top">{t("title")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
           <h2>{t("subtitle")}</h2>
-          <InvestorList 
+          <ButtonList 
             items={investors} 
             pagination={pagination} 
             translationFile="investors"
@@ -56,8 +58,11 @@ export async function getServerSideProps(context) {
   // const investorCategoriesRes = await fetchStrapiAPI("/investor-categories")
   const investorsRes = await fetchStrapiAPI("/investors", { 
 		fields: [
-      "name", 
-      "description"
+      "name",
+      "description",
+      "social", 
+      "updatedAt", 
+      "slug", 
     ], 
     populate: [
       "investor_categories"

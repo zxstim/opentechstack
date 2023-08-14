@@ -43,7 +43,7 @@ export default function WalletsList({ wallets, pagination, walletCategories }) {
                 <div className={styles.image_name_container}>
                   <Image 
                     src={wallet.attributes.logo.data.attributes.formats.thumbnail.url}
-                    alt={wallet.attributes.logo.alternativeText}
+                    alt="Wallet logo"
                     width={40}
                     height={40}
                   />

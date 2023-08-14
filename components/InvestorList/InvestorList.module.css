@@ -84,4 +84,10 @@
   margin-top: 16px;
   margin-bottom: 8px;
   color: #1a1a1a;
+  white-space: break-spaces;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

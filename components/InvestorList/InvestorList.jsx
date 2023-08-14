@@ -27,7 +27,7 @@ export default function ButtonList({ items, translationFile, indexPagePath, pagi
             }
           }).map((item) => (
           <div key={item.id} className={styles.button_container}>
-            <Link href={`/build-web3/${item.attributes.slug}`} 
+            <Link href={`/investors/info/${item.attributes.slug}`} 
               className={styles.anchor}
               >
               <div className={styles.container}>
