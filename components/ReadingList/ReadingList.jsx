@@ -31,6 +31,7 @@ export default function ReadingList({ articles, pagination, categories }) {
                   width={article.attributes.image.data.attributes.formats.small.width}
                   height={article.attributes.image.data.attributes.formats.small.height}
                   layout="responsive"
+                  className={styles.article_image}
                 />
                 <div className={styles.article_content_container}>
                   <div className={styles.timestamp}>

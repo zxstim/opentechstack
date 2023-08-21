@@ -1,0 +1,79 @@
+.modal {
+  display: visible;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content {
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  background-color: #fefefe;
+  margin: 0 0 0 auto;
+  padding: 20px;
+  width: 80vw;
+  height: 100vh;
+}
+
+.close {
+  display: inline-block;
+  background-color: whitesmoke;
+  border: 2px solid #1a1a1a;
+  box-shadow: 3px 3px black;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.header_one {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  /* margin-top: 16px; */
+  margin-bottom: 8px;
+  border: 2px solid #1a1a1a;
+  /* width: 100%; */
+  box-shadow: 3px 3px black;
+  cursor: pointer;
+  background-color:rgb(255, 255, 0);
+}
+
+.header_two {
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  border: 2px solid #1a1a1a;
+  /* width: 100%; */
+  cursor: pointer;
+  background-color:rgb(255, 229, 153);
+}
+
+.header_three {
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 8px;
+  border: 2px solid #1a1a1a;
+  /* width: 100%; */
+  cursor: pointer;
+  background-color:rgb(179, 255, 153);
+}
+
+.header_four {
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px;
+  margin-top: 8px;
+  border: 2px solid #1a1a1a;
+  /* width: 100%; */
+  cursor: pointer;
+  background-color:rgb(228, 212, 250);
+}

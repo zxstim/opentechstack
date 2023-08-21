@@ -96,7 +96,7 @@ export default function Home(props) {
           <AlertMessage 
             type="special"
             headline="👀 Looking for Defi.vn?"
-            message="We have rebranded as OpenTechStack to better reflect our mission to be an open technical resource hub for everyone."
+            message="We have rebranded as OpenTechStack to better reflect our mission to be an open technical resource hub for everyone"
           />
           <LanguageSelector />
           <h2>{t("section-4")}</h2>

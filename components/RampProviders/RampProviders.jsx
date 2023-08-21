@@ -5,10 +5,18 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import rampProviders from "./RampProviders.json";
 import styles from "./RampProviders.module.css";
+// import { gateFiSDK } from "@gatefi/js-sdk";
+
 
 export default function BuyCryptoProviders() {
   const { t } = useTranslation("buy");
   const router = useRouter();
+  
+  // const overlayInstance = new gateFiSDK.GateFiSDK({
+  //   merchantId: "f23f7281-13b6-44dc-b1bf-6948ddec8287",
+  //   displayMode: "overlay",
+  // });
+
 
   // unlimit crypto object
   const unlimit = {
@@ -190,6 +198,12 @@ export default function BuyCryptoProviders() {
             >
                 {t("buy")}
             </a>
+            {/* <button
+              className={styles.unlimit_buy_button}
+              onClick={() => overlayInstance.show()}
+            >
+              {t("buy")}
+            </button> */}
             <div className={styles.unlimit_sell_button}>{t("sell")}</div>
           </div>
           <Link 
@@ -198,6 +212,7 @@ export default function BuyCryptoProviders() {
             >
             {t("info")}
           </Link>
+
         </div>
       <h2>{t("subtitle2")}</h2>
       <div className={styles.providers_container}>

@@ -16,9 +16,16 @@
     gap: 16px;
     flex-direction: column;
     padding: 8px 8px 8px 8px;
+    border-radius: 20px;
     border: 2px solid #1a1a1a;
     box-shadow: 3px 3px #1a1a1a;
     cursor: pointer;
+}
+
+.article_container:hover {
+    box-shadow: 8px 8px black;
+    transition: all .20s ease-out;
+    transform: translate(-5px, -5px);
 }
 
 .article_content_container {
@@ -94,4 +101,10 @@
 
 .reading_anchor_tag:hover {
     text-decoration: none !important;
+}
+
+.article_image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
