@@ -1,7 +1,6 @@
 import Header from "../../../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import FloatingButton from "../../../components/FloatingButton/FloatingButton"
 import AppFooter from "../../../components/AppFooter/AppFooter";
 import GeneralList from "../../../components/GeneralList/GeneralList";
 import { fetchStrapiAPI } from "../../../lib/api";
@@ -40,7 +39,6 @@ export default function MetaversePage({ entities, pagination }) {
           <h1 id="top">{t("title6")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
-          <FloatingButton />
           <h2>{t("subtitle6")}</h2>
           <GeneralList 
             items={entities} 

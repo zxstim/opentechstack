@@ -56,7 +56,7 @@ export default function DefiInfoPage({ entity }) {
             }}>
               <Image 
                 src={entity[0].attributes.logo.data.attributes.formats.thumbnail.url}
-                alt={entity[0].attributes.logo.alternativeText}
+                alt="logo"
                 width={80}
                 height={80}
               />

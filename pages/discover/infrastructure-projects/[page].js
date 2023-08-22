@@ -1,14 +1,13 @@
 import Header from "../../../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import FloatingButton from "../../../components/FloatingButton/FloatingButton"
 import AppFooter from "../../../components/AppFooter/AppFooter";
 import GeneralList from "../../../components/GeneralList/GeneralList";
 import { fetchStrapiAPI } from "../../../lib/api";
 import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
 
-export default function GameFiPage({ entities, pagination }) {
+export default function InfraPage({ entities, pagination }) {
   const { t } = useTranslation("discover");
 
   const headerContent = {
@@ -40,7 +39,6 @@ export default function GameFiPage({ entities, pagination }) {
           <h1 id="top">{t("title11")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
-          <FloatingButton />
           <h2>{t("subtitle11")}</h2>
           <GeneralList 
             items={entities} 

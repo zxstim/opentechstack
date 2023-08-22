@@ -2,12 +2,12 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Header from "../../../components/Header/Header";
 import AppFooter from "../../../components/AppFooter/AppFooter";
-import DaosList from "../../../components/DiscoverList/DaosList/DaosList";
+import GeneralList from "../../../components/GeneralList/GeneralList";
 import { fetchStrapiAPI } from "../../../lib/api";
 import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
 
-export default function DeFiProjects({ defiProjects, pagination }) {
+export default function DAOprojects({ entities, pagination }) {
   const { t } = useTranslation("discover");
   const headerContent = {
     title: "Discover DAO projects - OpenTechStack.com",
@@ -21,7 +21,7 @@ export default function DeFiProjects({ defiProjects, pagination }) {
     fullPath: "/discover/daos",
     pathNamesEn: [
       "Discover",
-      "DeFi Projects"
+      "DAOs"
     ],
     pathNamesVi: [
       "Khám phá",
@@ -34,12 +34,16 @@ export default function DeFiProjects({ defiProjects, pagination }) {
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title7")}</h1>
+          <h1 id="top">{t("title9")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
-          <FloatingButton />
-          <h2>{t("subtitle1")}</h2>
-          <DaosList entities={defiProjects} pagination={pagination} />
+          <h2>{t("subtitle9")}</h2>
+          <GeneralList 
+            items={entities} 
+            pagination={pagination}
+            translationFile="discover"
+            indexPagePath="discover/daos"
+            />
           <br />
           <hr />
           <AppFooter />
@@ -50,35 +54,24 @@ export default function DeFiProjects({ defiProjects, pagination }) {
 }
 
 export async function getServerSideProps(context) {
-
-  if (context.locale === "en") {
-    var categorySlug = "defi"
-  } else {
-    var categorySlug = "defi-vi"
-  }
-
-  // const defiCategoriesRes = await fetchStrapiAPI("/project-categories", {
-  //   locale: "all",
-  //   sort: "name:asc",
-  // })
-  const defiProjectsRes = await fetchStrapiAPI("/projects", {
+  const entitiesRes = await fetchStrapiAPI("/entities", {
     filters: {
-      project_categories: {
+      entity_categories: {
         slug: {
-          $eq: categorySlug
-        }
+          $in: "dao",
+        },
       },
     },
     fields: [
       "name", 
-      "social", 
+      "socials", 
       "updatedAt", 
       "slug", 
       "locale"
     ],   
     populate: {
       logo: "*",
-      project_categories: {
+      entity_categories: {
         fields: ["name", "slug", "locale"],
         sort: ["name:asc"],
       }, 
@@ -97,8 +90,9 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      defiProjects: defiProjectsRes.data,
-      pagination: defiProjectsRes.meta.pagination,
+      entities: entitiesRes.data,
+      pagination: entitiesRes.meta.pagination,
+      // walletCategories: walletCategoriesRes.data,
       ...(await serverSideTranslations(context.locale, ["common", "discover"])),
       // Will be passed to the page component as props
     },
