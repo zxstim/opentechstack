@@ -5,18 +5,35 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import rampProviders from "./RampProviders.json";
 import styles from "./RampProviders.module.css";
-// import { gateFiSDK } from "@gatefi/js-sdk";
+// import { GateFiEventTypes, GateFiDisplayModeEnum, GateFiSDK } from '@gatefi/js-sdk'
+
 
 
 export default function BuyCryptoProviders() {
   const { t } = useTranslation("buy");
   const router = useRouter();
-  
-  // const overlayInstance = new gateFiSDK.GateFiSDK({
-  //   merchantId: "f23f7281-13b6-44dc-b1bf-6948ddec8287",
-  //   displayMode: "overlay",
-  // });
+  // const [gatefiOverlay, setGatefiOverlay] = useState(false);  
+  // var overlayInstanceSDK = null;
 
+  // const createOverlaySdkInstance = () => {
+  //   const randomString = require('crypto').randomBytes(32).toString('hex');
+  
+  //   var overlayInstanceSDK = typeof document !== 'undefined' && new GateFiSDK({
+  //       merchantId: "f23f7281-13b6-44dc-b1bf-6948ddec8287",
+  //       displayMode: GateFiDisplayModeEnum.Overlay,
+  //       isSandbox: false,
+  //       externalId: randomString,
+  //       defaultFiat: {
+  //           currency: "EUR",
+  //           amount: "500",
+  //       },
+  //       defaultCrypto: {
+  //           currency: "BTC"
+  //       },
+  //   })
+  //   setGatefiOverlay(true);
+  //   return overlayInstanceSDK;
+  // }
 
   // unlimit crypto object
   const unlimit = {
@@ -200,7 +217,11 @@ export default function BuyCryptoProviders() {
             </a>
             {/* <button
               className={styles.unlimit_buy_button}
-              onClick={() => overlayInstance.show()}
+              onClick={gatefiOverlay ? 
+                () => overlayInstanceSDK.show()
+                :
+                () => createOverlaySdkInstance()
+              }
             >
               {t("buy")}
             </button> */}
