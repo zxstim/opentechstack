@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import styles from "./BuidlerPath.module.css";
 
-export default function BuidlerPath() {
+import styles from "./BuilderPath.module.css";
+
+export default function BuilderPath() {
   const router = useRouter();
 
   return (

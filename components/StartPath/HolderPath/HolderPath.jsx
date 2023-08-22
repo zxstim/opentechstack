@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import AlertMessage from "../../AlertMessage/AlertMessage";
-import styles from "./HodlerPath.module.css";
+import styles from "./HolderPath.module.css";
 
-export default function HodlerPath() {
+export default function HolderPath() {
   const router = useRouter();
 
   return (

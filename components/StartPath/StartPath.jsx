@@ -7,8 +7,8 @@ export default function StartPath() {
   const startPaths = [
     {
         id: 1,
-        name: "Hodler",
-        web: "hodler",
+        name: "Holder",
+        web: "holder",
         desc: "You want to achieve enlightenment, the diamond hands status. If you treasure your sanity, pick this path. Don't be shy! This is the most popular path.",
         descVi: "Bạn mong được khai sáng, đạt được danh hiệu bàn tay kim cương. Nếu bạn muốn nhẹ nhõm đầu óc, hãy chọn con đường này. Đừng lo lắng! Đây là con đường mà ai cũng trải qua.",
         imgPath: "/hodl.svg"
@@ -23,8 +23,8 @@ export default function StartPath() {
     },
     {
         id: 3,
-        name: "Buidler",
-        web: "buidler",
+        name: "Builder",
+        web: "builder",
         desc: "You are ambitious, you want to build your own crypto project, you want to shape the market and the future of the industry. Pain is temporary, glory is forever. Join the revolution comrades!",
         descVi: "Bạn có đam mê mãnh liệt, bạn muốn xây dựng dự án crypto của riêng mình, bạn muốn định hình thị trường và tương lai của ngành. Đau đớn là tạm thời, danh tiếng là mãi mãi. Hãy tham gia cuộc cách mạng đồng chí ơi!",
         imgPath: "/buidler.svg"
