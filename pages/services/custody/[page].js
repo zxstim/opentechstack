@@ -9,7 +9,7 @@ import LanguageSelector from "../../../components/LanguageSelector/LanguageSelec
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
 
 export default function SecurityPage({ entities, pagination }) {
-  const { t } = useTranslation("security");
+  const { t } = useTranslation("services");
 
   const headerContent = {
     title: "How to use Web3 Wallets - OpenTechStack.com",
@@ -20,14 +20,14 @@ export default function SecurityPage({ entities, pagination }) {
   }
 
   const paths = {
-    fullPath: "/services/security",
+    fullPath: "/services/custody",
     pathNamesEn: [
       "Services",
-      "Security"
+      "Custody"
     ],
     pathNamesVi: [
       "Dịch vụ",
-      "Bảo mật"
+      "Ký gửi tài sản"
     ],
   }
 
@@ -37,16 +37,16 @@ export default function SecurityPage({ entities, pagination }) {
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title")}</h1>
+          <h1 id="top">{t("title4")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
           <FloatingButton />
-          <h2>{t("subtitle")}</h2>
+          <h2>{t("subtitle4")}</h2>
           <GeneralList 
             items={entities} 
             pagination={pagination}
-            translationFile="security"
-            indexPagePath="services/security"
+            translationFile="services"
+            indexPagePath="services/custody"
             />
           <br />
           <hr />
@@ -99,7 +99,7 @@ export async function getServerSideProps(context) {
       entities: entitiesRes.data,
       pagination: entitiesRes.meta.pagination,
       // walletCategories: walletCategoriesRes.data,
-      ...(await serverSideTranslations(context.locale, ["common", "security"])),
+      ...(await serverSideTranslations(context.locale, ["common", "services"])),
       // Will be passed to the page component as props
     },
   };

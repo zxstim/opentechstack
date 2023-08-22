@@ -1,53 +1,45 @@
-import Header from "../../../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import FloatingButton from "../../../components/FloatingButton/FloatingButton"
 import AppFooter from "../../../components/AppFooter/AppFooter";
-import GeneralList from "../../../components/GeneralList/GeneralList";
-import { fetchStrapiAPI } from "../../../lib/api";
+import Header from "../../../components/Header/Header";
 import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
+import NFTCollectionsList from "../../../components/DiscoverList/NFTCollectionsList/NFTCollectionsList";
+import { fetchStrapiAPI } from "../../../lib/api";
 
-export default function SecurityPage({ entities, pagination }) {
-  const { t } = useTranslation("services");
+export default function NFTCollections({ entities, pagination }) {
+  const { t } = useTranslation("discover");
 
   const headerContent = {
-    title: "How to use Web3 Wallets - OpenTechStack.com",
-    description: "Learn everything about web3 wallets, including setup guide, security practices, what can you use the wallets for and many more topics.",
+    title: "Discover NFT collections - OpenTechStack.com",
+    description: "Learn everything about NFT collections, their team, investors, and what they do.",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",
-    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/93f92267-0ff6-4ef9-45c4-060ea1b95400/defi",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/4162f9b8-76c7-4d57-5b1f-fb75a337ce00/defi",
   }
 
   const paths = {
-    fullPath: "/services/marketing",
+    fullPath: "/discover/nft-collections",
     pathNamesEn: [
-      "Services",
-      "Marketing"
+      "Discover",
+      "NFT Collections"
     ],
     pathNamesVi: [
-      "Dịch vụ",
-      "Quảng cáo"
+      "Khám phá",
+      "Bộ sưu tập NFT"
     ],
   }
-
 
   return (
     <>
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title3")}</h1>
+          <h1 id="top">{t("title4")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
-          <FloatingButton />
-          <h2>{t("subtitle3")}</h2>
-          <GeneralList 
-            items={entities} 
-            pagination={pagination}
-            translationFile="services"
-            indexPagePath="services/marketing"
-            />
+          <h2>{t("subtitle4")}</h2>
+          <NFTCollectionsList entities={entities} pagination={pagination} />
           <br />
           <hr />
           <AppFooter />
@@ -56,14 +48,12 @@ export default function SecurityPage({ entities, pagination }) {
     </>
   );
 }
-
 export async function getServerSideProps(context) {
-
   const entitiesRes = await fetchStrapiAPI("/entities", {
     filters: {
       entity_categories: {
         slug: {
-          $in: "marketing",
+          $in: "nft-collection",
         },
       },
     },
@@ -98,7 +88,7 @@ export async function getServerSideProps(context) {
       entities: entitiesRes.data,
       pagination: entitiesRes.meta.pagination,
       // walletCategories: walletCategoriesRes.data,
-      ...(await serverSideTranslations(context.locale, ["common", "services"])),
+      ...(await serverSideTranslations(context.locale, ["common", "discover"])),
       // Will be passed to the page component as props
     },
   };

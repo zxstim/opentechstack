@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import PaginatedList from "../PaginatedList/PaginatedList";
@@ -43,7 +43,7 @@ export default function GeneralList({ items, pagination, itemCategories, transla
                 <div className={styles.image_name_container}>
                   <Image 
                     src={item.attributes.logo.data.attributes.formats.thumbnail.url}
-                    alt={item.attributes.logo.alternativeText}
+                    alt="logo"
                     width={40}
                     height={40}
                   />

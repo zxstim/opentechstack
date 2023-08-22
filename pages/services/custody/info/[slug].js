@@ -13,7 +13,7 @@ import LanguageSelector from "../../../../components/LanguageSelector/LanguageSe
 import NavigationGroup from "../../../../components/NavigationGroup/NavigationGroup";
 
 export default function SecurityInfoPage({ entity }) {
-  const { t } = useTranslation("security");
+  const { t } = useTranslation("services");
 
   const headerContent = {
     title: `${entity[0].attributes.name} - OpenTechStack.com`,
@@ -128,7 +128,7 @@ export async function getServerSideProps(context) {
   return {
     props: { 
         entity: entityRes.data,
-        ...(await serverSideTranslations(context.locale, ["common", "security"])) 
+        ...(await serverSideTranslations(context.locale, ["common", "services"])) 
     },
   };
 }

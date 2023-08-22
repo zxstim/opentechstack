@@ -8,26 +8,26 @@ import { fetchStrapiAPI } from "../../../lib/api";
 import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
 
-export default function SecurityPage({ entities, pagination }) {
-  const { t } = useTranslation("services");
+export default function MetaversePage({ entities, pagination }) {
+  const { t } = useTranslation("discover");
 
   const headerContent = {
-    title: "How to use Web3 Wallets - OpenTechStack.com",
-    description: "Learn everything about web3 wallets, including setup guide, security practices, what can you use the wallets for and many more topics.",
+    title: "Discover Metaverse projects - OpenTechStack.com",
+    description: "Learn everything about Metaverse projects, their team, investors, and what they do.",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",
-    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/93f92267-0ff6-4ef9-45c4-060ea1b95400/defi",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/4162f9b8-76c7-4d57-5b1f-fb75a337ce00/defi",
   }
 
   const paths = {
-    fullPath: "/services/security",
+    fullPath: "/discover/metaverse-projects",
     pathNamesEn: [
-      "Services",
-      "Security"
+      "Discover",
+      "Metaverse Projects"
     ],
     pathNamesVi: [
-      "Dịch vụ",
-      "Bảo mật"
+      "Khám phá",
+      "Dự án Metaverse"
     ],
   }
 
@@ -37,16 +37,16 @@ export default function SecurityPage({ entities, pagination }) {
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title3")}</h1>
+          <h1 id="top">{t("title6")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
           <FloatingButton />
-          <h2>{t("subtitle3")}</h2>
+          <h2>{t("subtitle6")}</h2>
           <GeneralList 
             items={entities} 
             pagination={pagination}
-            translationFile="services"
-            indexPagePath="services/analytics"
+            translationFile="discover"
+            indexPagePath="discover/metaverse-projects"
             />
           <br />
           <hr />
@@ -88,7 +88,7 @@ export async function getServerSideProps(context) {
     filters: {
       entity_categories: {
         slug: {
-          $in: "analytics",
+          $in: "metaverse",
         },
       },
     },
@@ -123,7 +123,7 @@ export async function getServerSideProps(context) {
       entities: entitiesRes.data,
       pagination: entitiesRes.meta.pagination,
       // walletCategories: walletCategoriesRes.data,
-      ...(await serverSideTranslations(context.locale, ["common", "services"])),
+      ...(await serverSideTranslations(context.locale, ["common", "discover"])),
       // Will be passed to the page component as props
     },
   };

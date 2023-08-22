@@ -1,19 +1,17 @@
-// import Link from "next/link";
-import Header from "../../../../components/Header/Header";
 import Image from "next/image";
-// import constructSlug from "../../../../utils/constructSlug";
-// import formatArticleTimeStampEn from "../../../../utils/formatArticleTimeStampEn";
-// import formatArticleTimeStampVi from "../../../../utils/formatArticleTimeStampVi";
+import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { fetchStrapiAPI } from "../../../../lib/api";
-import AppFooter from "../../../../components/AppFooter/AppFooter";
-import GeneralInfo from "../../../../components/GeneralList/GeneralInfo/GeneralInfo";
+import Header from "../../../../components/Header/Header";
 import LanguageSelector from "../../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../../components/NavigationGroup/NavigationGroup";
+import AppFooter from "../../../../components/AppFooter/AppFooter";
+import NFTCollectionInfo from "../../../../components/DiscoverList/NFTCollectionsList/NFTCollectionInfo/NFTCollectionInfo";
 
-export default function SecurityInfoPage({ entity }) {
-  const { t } = useTranslation("services");
+export default function DefiInfoPage({ entity }) {
+  const { t } = useTranslation("discover");
+  const router = useRouter();
 
   const headerContent = {
     title: `${entity[0].attributes.name} - OpenTechStack.com`,
@@ -24,21 +22,20 @@ export default function SecurityInfoPage({ entity }) {
   }
 
   const paths = {
-    fullPath: `/services/security/info/${entity[0].attributes.slug}`,
+    fullPath: `/discover/nft-collections/info/${entity[0].attributes.slug}`,
     pathNamesEn: [
-      "Services",
-      "Security",
+      "Discover",
+      "NFT Collections",
       "Info",
       entity[0].attributes.name
     ],
     pathNamesVi: [
-      "Dịch vụ",
-      "Bảo mật",
+      "Khám phá",
+      "Bộ sưu tập NFT",
       "Thông tin",
       entity[0].attributes.name
     ],
   }
-
 
   return (
     <>
@@ -51,8 +48,7 @@ export default function SecurityInfoPage({ entity }) {
             display: "flex",
             flexDirection: "row",
             gap: "16px",
-            alignItems: "center",
-            marginBottom: "20px",
+            alignItems: "center"
           }}>
             <div style={{
               width: "80px",
@@ -71,20 +67,7 @@ export default function SecurityInfoPage({ entity }) {
               }}
             >{entity[0].attributes.name}</h1>
           </div>
-
-          {/* <div style={{ display: "flex", marginBottom: "10px" }}>
-            <Link href={`/discover/wallets/info/${constructSlug(entity[0].attributes.slug).slugEn}`} locale="en">
-            <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇬🇧</p>
-            </a>
-            </Link>
-            <Link href={`/discover/wallets/info/${constructSlug(entity[0].attributes.slug).slugVi}`} locale="vi">
-            <a style={{ textDecoration: "none" }}>
-                <p className="i18n-button">🇻🇳</p>
-            </a>
-            </Link>
-          </div> */}
-          <GeneralInfo item={entity} translationFile="security" />
+          <NFTCollectionInfo entity={entity}/>
           <br />
           <hr />
           <AppFooter />
@@ -128,7 +111,7 @@ export async function getServerSideProps(context) {
   return {
     props: { 
         entity: entityRes.data,
-        ...(await serverSideTranslations(context.locale, ["common", "services"])) 
+        ...(await serverSideTranslations(context.locale, ["common", "discover"])) 
     },
   };
 }

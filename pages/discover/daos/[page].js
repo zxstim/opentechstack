@@ -1,53 +1,45 @@
-import Header from "../../../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import FloatingButton from "../../../components/FloatingButton/FloatingButton"
+import Header from "../../../components/Header/Header";
 import AppFooter from "../../../components/AppFooter/AppFooter";
-import GeneralList from "../../../components/GeneralList/GeneralList";
+import DaosList from "../../../components/DiscoverList/DaosList/DaosList";
 import { fetchStrapiAPI } from "../../../lib/api";
 import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
 
-export default function SecurityPage({ entities, pagination }) {
-  const { t } = useTranslation("services");
-
+export default function DeFiProjects({ defiProjects, pagination }) {
+  const { t } = useTranslation("discover");
   const headerContent = {
-    title: "How to use Web3 Wallets - OpenTechStack.com",
-    description: "Learn everything about web3 wallets, including setup guide, security practices, what can you use the wallets for and many more topics.",
+    title: "Discover DAO projects - OpenTechStack.com",
+    description: "Learn everything about DAO projects, their team, investors, and what they do.",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",
-    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/93f92267-0ff6-4ef9-45c4-060ea1b95400/defi",
+    image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/4162f9b8-76c7-4d57-5b1f-fb75a337ce00/defi",
   }
 
   const paths = {
-    fullPath: "/services/marketing",
+    fullPath: "/discover/daos",
     pathNamesEn: [
-      "Services",
-      "Marketing"
+      "Discover",
+      "DeFi Projects"
     ],
     pathNamesVi: [
-      "Dịch vụ",
-      "Quảng cáo"
+      "Khám phá",
+      "Dự án DAO"
     ],
   }
-
 
   return (
     <>
       <Header content={headerContent} />
       <div className="App">
         <div className="markdown-body">
-          <h1 id="top">{t("title3")}</h1>
+          <h1 id="top">{t("title7")}</h1>
           <LanguageSelector />
           <NavigationGroup paths={paths} />
           <FloatingButton />
-          <h2>{t("subtitle3")}</h2>
-          <GeneralList 
-            items={entities} 
-            pagination={pagination}
-            translationFile="services"
-            indexPagePath="services/marketing"
-            />
+          <h2>{t("subtitle1")}</h2>
+          <DaosList entities={defiProjects} pagination={pagination} />
           <br />
           <hr />
           <AppFooter />
@@ -59,24 +51,34 @@ export default function SecurityPage({ entities, pagination }) {
 
 export async function getServerSideProps(context) {
 
-  const entitiesRes = await fetchStrapiAPI("/entities", {
+  if (context.locale === "en") {
+    var categorySlug = "defi"
+  } else {
+    var categorySlug = "defi-vi"
+  }
+
+  // const defiCategoriesRes = await fetchStrapiAPI("/project-categories", {
+  //   locale: "all",
+  //   sort: "name:asc",
+  // })
+  const defiProjectsRes = await fetchStrapiAPI("/projects", {
     filters: {
-      entity_categories: {
+      project_categories: {
         slug: {
-          $in: "marketing",
-        },
+          $eq: categorySlug
+        }
       },
     },
     fields: [
       "name", 
-      "socials", 
+      "social", 
       "updatedAt", 
       "slug", 
       "locale"
     ],   
     populate: {
       logo: "*",
-      entity_categories: {
+      project_categories: {
         fields: ["name", "slug", "locale"],
         sort: ["name:asc"],
       }, 
@@ -95,10 +97,9 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      entities: entitiesRes.data,
-      pagination: entitiesRes.meta.pagination,
-      // walletCategories: walletCategoriesRes.data,
-      ...(await serverSideTranslations(context.locale, ["common", "services"])),
+      defiProjects: defiProjectsRes.data,
+      pagination: defiProjectsRes.meta.pagination,
+      ...(await serverSideTranslations(context.locale, ["common", "discover"])),
       // Will be passed to the page component as props
     },
   };

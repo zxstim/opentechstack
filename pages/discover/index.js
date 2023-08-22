@@ -68,12 +68,12 @@ export default function Discover(props) {
     {
       id: 6,
       name: `${t("title6")}`,
-      slug: "metaverses",
+      slug: "metaverse-projects",
     },
     {
       id: 7,
       name: `${t("title3")}`,
-      slug: "portfolio-management",
+      slug: "portfolio-management-tools",
     },
     {
       id: 8,
@@ -93,7 +93,7 @@ export default function Discover(props) {
     {
       id: 11,
       name: `${t("title11")}`,
-      slug: "infrastructure",
+      slug: "infrastructure-projects",
     },
   ]
 

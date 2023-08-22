@@ -12,8 +12,8 @@ import GeneralInfo from "../../../../components/GeneralList/GeneralInfo/GeneralI
 import LanguageSelector from "../../../../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../../../../components/NavigationGroup/NavigationGroup";
 
-export default function SecurityInfoPage({ entity }) {
-  const { t } = useTranslation("services");
+export default function InfraInfoPage({ entity }) {
+  const { t } = useTranslation("discover");
 
   const headerContent = {
     title: `${entity[0].attributes.name} - OpenTechStack.com`,
@@ -24,16 +24,16 @@ export default function SecurityInfoPage({ entity }) {
   }
 
   const paths = {
-    fullPath: `/services/security/info/${entity[0].attributes.slug}`,
+    fullPath: `/discover/infrastructure-projects/info/${entity[0].attributes.slug}`,
     pathNamesEn: [
-      "Services",
-      "Security",
+      "Discover",
+      "Infrastructure Projects",
       "Info",
       entity[0].attributes.name
     ],
     pathNamesVi: [
-      "Dịch vụ",
-      "Bảo mật",
+      "Khám phá",
+      "Dự án nền tảng",
       "Thông tin",
       entity[0].attributes.name
     ],
@@ -84,7 +84,7 @@ export default function SecurityInfoPage({ entity }) {
             </a>
             </Link>
           </div> */}
-          <GeneralInfo item={entity} translationFile="security" />
+          <GeneralInfo item={entity} translationFile="discover" />
           <br />
           <hr />
           <AppFooter />
@@ -128,7 +128,7 @@ export async function getServerSideProps(context) {
   return {
     props: { 
         entity: entityRes.data,
-        ...(await serverSideTranslations(context.locale, ["common", "services"])) 
+        ...(await serverSideTranslations(context.locale, ["common", "discover"])) 
     },
   };
 }

@@ -35,8 +35,52 @@ module.exports = {
         destination: "/discover/communities/1"
       },
       {
+        source: "/discover/nft-collections",
+        destination: "/discover/nft-collections/1"
+      },
+      {
+        source: "/discover/gamefi-projects",
+        destination: "/discover/gamefi-projects/1"
+      },
+      {
+        source: "/discover/metaverse-projects",
+        destination: "/discover/metaverse-projects/1"
+      },
+      {
+        source: "/discover/portfolio-management-tools",
+        destination: "/discover/portfolio-management-tools/1"
+      },
+      {
+        source: "/discover/daos",
+        destination: "/discover/daos/1"
+      },
+      {
+        source: "/discover/nftfi-projects",
+        destination: "/discover/nftfi-projects/1"
+      },
+      {
+        source: "/discover/infrastructure-projects",
+        destination: "/discover/infrastructure-projects/1"
+      },
+      {
         source: "/services/security",
         destination: "/services/security/1"
+      },
+      {
+        source: "/services/analytics",
+        destination: "/services/analytics/1"
+      },
+      {
+        source: "/services/software-development",
+        destination: "/services/software-development/1"
+      },
+      {
+        source: "/services/custody",
+        destination: "/services/custody/1"
+      },
+      {
+        source: "/services/marketing",
+        destination: "/services/marketing/1"
       },
       {
         source: "/dev-guides",

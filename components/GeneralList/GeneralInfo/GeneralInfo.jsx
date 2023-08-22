@@ -1,6 +1,6 @@
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import formatArticleTimeStampEn from "../../../utils/formatArticleTimeStampEn";
@@ -11,8 +11,8 @@ import rehypeRaw from "rehype-raw";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import styles from "./GeneralInfo.module.css";
-import timeAgo from '../../../utils/formatTimeAgoEn';
-import Linkify from 'react-linkify';
+// import timeAgo from '../../../utils/formatTimeAgoEn';
+// import Linkify from 'react-linkify';
 // import useSWR from 'swr'
 
 export default function GeneralInfo({ item, translationFile }) {
