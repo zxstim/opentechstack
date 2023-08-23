@@ -3,7 +3,6 @@ import UserProfile from '../UserProfile/UserProfile'
 import styles from './DashboardLayout.module.css'
 
 export default function DashboardLayout({ session }) {
-    console.log(session)
     const cardOne = {
         title: "Card One",
         description: "Random description for card one that is very long and will wrap to the next line."
