@@ -13,7 +13,6 @@ export default function SignIn({ providers, csrfToken }) {
 		icon: "../opentechstack.svg",
 		domain: "https://www.OpenTechStack.com",
 		image: "https://imagedelivery.net/V8LKJG1wA8wvjWYrCdF9Bw/a6d25640-36ed-4985-a8bd-0f8e1c170b00/defi",
-		twDomain: "OpenTechStack.com",
 	};
 
   return (
