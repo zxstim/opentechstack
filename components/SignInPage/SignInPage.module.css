@@ -98,3 +98,128 @@
 .separator::after {
   margin-left: 10px;
 }
+
+.passkey_overlay {
+  position: fixed; /* Fixed positioning ensures it covers the entire viewport */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Appearance */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  z-index: 2; /* This ensures it's above most content */
+  /* Centering content on overlay */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+.passkey_form {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	background-color: white;
+  border-radius: 8px;
+	width: 320px;
+	padding: 32px 24px;
+	height: fit-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* A slight shadow for depth */
+}
+
+.passkey_header {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 320px;
+}
+
+.passkey_title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.passkey_form_control {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.close_button {
+	align-self: flex-start;
+	background-color: #ff0000;
+	color: #240232;
+	border: 2px solid #1a1a1a;
+	padding: 4px 8px 4px 8px;
+	width: fit-content;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 3px 3px #1a1a1a;
+	transition: all 0.2s ease-in-out;
+}
+
+.close_button:hover {
+	transform: translate(3px, 3px);
+	box-shadow: 0px 0px #1a1a1a;
+}
+
+.clear_button {
+	align-self: flex-start;
+	background-color: #ffffff;
+	color: #0f2b3b;
+	border: 2px solid #1a1a1a;
+	padding: 4px 8px 4px 8px;
+	width: fit-content;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 3px 3px #1a1a1a;
+	transition: all 0.2s ease-in-out;
+}
+
+.clear_button:hover {
+	transform: translate(3px, 3px);
+	box-shadow: 0px 0px #1a1a1a;
+}
+
+.passkey_input_container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 320px;
+}
+
+.passkey_input {
+	background-color: #fff;
+	color: #1a1a1a;
+	font-size: 16px;
+	border: 2px solid #1a1a1a;
+	padding: 8px 8px 8px 8px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.submit_button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background-color: #00ff7f;
+	color: #101c1c;
+	border: 2px solid #1a1a1a;
+	padding: 8px 8px 8px 8px;
+	width: 320px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 3px 3px #1a1a1a;
+	transition: all 0.2s ease-in-out;
+}
+
+.submit_button:hover {
+	transform: translate(3px, 3px);
+	box-shadow: 0px 0px #1a1a1a;
+}
