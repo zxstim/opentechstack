@@ -34,20 +34,20 @@ export default function ReadingPage({ article }) {
           ))
         }
       </div>
-      <Link href={`/${article.attributes.author.data.attributes.name}`} style={{ textDecoration: "none" }}>
-        <div style={{ display: "flex" }}>
-          <div className={styles.article_author_container}>
-            <Image
-              src={article.attributes.author.data.attributes.picture.data.attributes.formats.thumbnail.url}
-              alt={article.attributes.author.data.attributes.picture.data.attributes.formats.thumbnail.name}
-              width={50}
-              height={50}
-              className={styles.author_pfp}
-            />
-            <div>{article.attributes.author.data.attributes.name}</div>
-          </div>
+      {/* <Link href={`/${article.attributes.author.data.attributes.name}`} style={{ textDecoration: "none" }}> */}
+      <div style={{ display: "flex" }}>
+        <div className={styles.article_author_container}>
+          <Image
+            src={article.attributes.author.data.attributes.picture.data.attributes.formats.thumbnail.url}
+            alt={article.attributes.author.data.attributes.picture.data.attributes.formats.thumbnail.name}
+            width={50}
+            height={50}
+            className={styles.author_pfp}
+          />
+          <div>{article.attributes.author.data.attributes.name}</div>
         </div>
-      </Link >
+      </div>
+      {/* </Link > */}
       <div className={styles.timestamp}>
         🗓️ {router.locale === "en" ? formatArticleTimeStampEn(article.attributes.updatedAt) : formatArticleTimeStampVi(article.attributes.updatedAt)}
       </div>

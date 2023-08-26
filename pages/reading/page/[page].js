@@ -57,7 +57,7 @@ export async function getServerSideProps(context) {
       image: "*",
       categories: {
         fields: ["name", "slug"],
-        sort: ["name:asc"],
+        sort: ["name:desc"],
       },
       author: {
         populate: ["picture"],
@@ -66,7 +66,8 @@ export async function getServerSideProps(context) {
     pagination: {
       page: context.query.page,
       pageSize: 25,
-    }, 
+    },
+    sort: ["publishedAt:desc"] 
   })
 
   return {

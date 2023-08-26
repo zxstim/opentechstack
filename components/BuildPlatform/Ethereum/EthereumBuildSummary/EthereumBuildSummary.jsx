@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import AlertMessage from '../../../AlertMessage/AlertMessage';
 
-export default function KlaytnBuildSummary() {
+export default function EthereumBuildSummary() {
   return (
     <>
       <h2>Summary</h2>
@@ -14,7 +14,7 @@ export default function KlaytnBuildSummary() {
       <AlertMessage 
         type="info"
         headline="Need more information?" 
-        message="Read the full article about Ethereum [here ➡️](https://opentechstack.com/reading/what-is-ethereum)"
+        message="Read the full article about Ethereum [here ➡️](https://www.opentechstack.com/reading/understanding-ethereum-exploring-the-revolutionary-blockchain-platform)"
         markdown={true}
       />
       <p>Ethereum can be used to build the followings</p>
