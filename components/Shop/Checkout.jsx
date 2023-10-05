@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import commifyViet from "../../utils/commifyViet";
+import commify from "../../utils/commify";
 
 export default function Checkout() {
   const router = useRouter();
@@ -19,27 +19,45 @@ export default function Checkout() {
   const [cardCVC, setCardCVC] = useState("");
   const [contactEmail, setContactEmail] = useState("");
 
+  // var paymentMethods = [
+  //   {
+  //     id: 1,
+  //     name: "Domestic cards",
+  //     nameVi: "Thẻ nội địa"
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "International cards",
+  //     nameVi: "Thẻ quốc tế"
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "ZaloPay",
+  //     nameVi: "ZaloPay"
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "MoMo",
+  //     nameVi: "MoMo"
+  //   },
+  // ];
+
   var paymentMethods = [
     {
       id: 1,
-      name: "Domestic cards",
-      nameVi: "Thẻ nội địa"
+      name: "Visa",
+      nameVi: "Thẻ Visa"
     },
     {
       id: 2,
-      name: "International cards",
-      nameVi: "Thẻ quốc tế"
+      name: "Mastercard",
+      nameVi: "Thẻ Mastercard"
     },
     {
       id: 3,
-      name: "ZaloPay",
-      nameVi: "ZaloPay"
-    },
-    {
-      id: 4,
-      name: "MoMo",
-      nameVi: "MoMo"
-    },
+      name: "Crypto",
+      nameVi: "Crypto"
+    }
   ];
   const [paymentMethodSelected, setPaymentMethodSelected] = useState(
     paymentMethods[0]
@@ -115,37 +133,37 @@ export default function Checkout() {
                 marginBottom: "16px"
               }}
             >
-              ZaloPay QR
+              Crypto QR
             </div>
           </div>
         );
         break;
-      case 4:
-        return (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                backgroundColor: "black",
-                color: "white",
-                height: "100px",
-                width: "100px",
-                alignItems: "center",
-                justifyContent: "center",
-                marginTop: "16px",
-                marginBottom: "16px"
-              }}
-            >
-              MoMo QR
-            </div>
-          </div>
-        );
+      // case 4:
+      //   return (
+      //     <div
+      //       style={{
+      //         display: "flex",
+      //         alignItems: "center",
+      //         justifyContent: "center",
+      //       }}
+      //     >
+      //       <div
+      //         style={{
+      //           display: "flex",
+      //           backgroundColor: "black",
+      //           color: "white",
+      //           height: "100px",
+      //           width: "100px",
+      //           alignItems: "center",
+      //           justifyContent: "center",
+      //           marginTop: "16px",
+      //           marginBottom: "16px"
+      //         }}
+      //       >
+      //         MoMo QR
+      //       </div>
+      //     </div>
+      //   );
       default:
         return (
           <div className="payment-card-info-container">
@@ -187,8 +205,8 @@ export default function Checkout() {
   return (
     <>
       <div className="cart-buy-more-button">
-        <Link href="/shop">
-          <div>{t("return-shop")}</div>
+        <Link href="/shop" style={{textDecoration: "none"}}>
+          <div style={{ color: "black" }}>{t("return-shop")}</div>
         </Link>
       </div>
       <div className="checkout-grid">
@@ -198,7 +216,7 @@ export default function Checkout() {
               <div className="cart-item-info">
                 <div className="cart-item-name">{inventory.name}</div>
                 <div className="cart-item-price">
-                  {commifyViet(inventory.price * countDuplicate(cartView, inventory))} ₫
+                  ${commify(inventory.price * countDuplicate(cartView, inventory))}
                 </div>
               </div>
               <div className="cart-item-quantity">
@@ -210,7 +228,7 @@ export default function Checkout() {
             <div className="cart-subtotal-info">
               <div className="cart-subtotal-text">{t("subtotal")}</div>
               <div className="cart-subtotal-amount">
-                {commifyViet(cartTotal)} ₫
+                ${commify(cartTotal)}
               </div>
             </div>
             <div className="cart-subtotal-discount">
@@ -229,14 +247,14 @@ export default function Checkout() {
             <div className="cart-subtotal-discount-info">
               <div className="cart-subtotal-discount-text">{t("discount")}</div>
               <div className="cart-subtotal-discount-amount">
-                - {commifyViet(discount)} ₫
+                - ${commify(discount)}
               </div>
             </div>
           </div>
           <div className="cart-total">
             <div className="cart-total-text">{t("total")}</div>
             <div className="cart-total-amount">
-              {commifyViet(cartTotal - discount)} ₫
+              ${commify(cartTotal - discount)}
             </div>
           </div>
         </div>

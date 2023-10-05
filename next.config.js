@@ -15,8 +15,8 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/investors",
-        destination: "/investors/1"
+        source: "/discover/investors",
+        destination: "/discover/investors/1"
       },
       {
         source: "/discover/blockchains",

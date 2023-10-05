@@ -8,7 +8,7 @@ import JobsList from "../components/JobsList/JobsList";
 export default function JobsListPage({jobs}) {
   const { t } = useTranslation("jobs");
   const headerContent = {
-    title: "Find your Web3 jobs | Tìm công việc Web3 - OpenTechStack.com",
+    title: "Find your Web3 jobs - OpenTechStack.com",
     description: "Explore our job board with thousands of Web3 jobs in various roles and locations including remote options.",
     icon: "../opentechstack.svg",
     domain: "https://www.OpenTechStack.com",

@@ -1,11 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import AppFooter from "../../components/AppFooter/AppFooter";
-import ButtonList from "../../components/InvestorList/InvestorList";
-import Header from "../../components/Header/Header";
-import NavigationGroup from "../../components/NavigationGroup/NavigationGroup";
-import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
-import { fetchStrapiAPI } from "../../lib/api";
+import AppFooter from "../../../components/AppFooter/AppFooter";
+import ButtonList from "../../../components/DiscoverList/InvestorList/InvestorList";
+import Header from "../../../components/Header/Header";
+import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
+import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
+import { fetchStrapiAPI } from "../../../lib/api";
 // import ButtonList from "../../components/ButtonList/ButtonList";
 
 export default function Investors({ investors, pagination }) {
@@ -19,11 +19,13 @@ export default function Investors({ investors, pagination }) {
   }
 
   const paths = {
-    fullPath: "/investors",
+    fullPath: "/discover/investors",
     pathNamesEn: [
+      "Discover",
       "Investors"
     ],
     pathNamesVi: [
+      "Khám phá",
       "Nhà đầu tư"
     ],
   }

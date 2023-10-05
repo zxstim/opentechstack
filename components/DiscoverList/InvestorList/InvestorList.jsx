@@ -2,7 +2,7 @@ import styles from "./InvestorList.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-import PaginatedList from "../PaginatedList/PaginatedList";
+import PaginatedList from "../../PaginatedList/PaginatedList";
 
 
 export default function ButtonList({ items, translationFile, indexPagePath, pagination }) {

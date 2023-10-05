@@ -62,7 +62,7 @@ export default function BuidlStation() {
             <h2>{t("cohosts")}</h2>
             {
                 cohosts.map((cohost) => (
-                    <Accordion content={cohost} />
+                    <Accordion key={cohost.id} content={cohost} />
                 ))
             }
             {/* <h2>{t("contributors")}</h2>

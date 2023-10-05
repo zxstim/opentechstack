@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import commifyViet from "../../utils/commifyViet";
+import commify from "../../utils/commify";
 import storeInventories from "./StoreInventories.json";
 
 export default function StoreInventories() {
@@ -56,7 +56,7 @@ export default function StoreInventories() {
   return (
     <>
       <div className="shop-cart-info-container">
-        <div>Total: <span className="shop-cart-total">{commifyViet(cartTotal)} ₫</span></div>
+        <div>Total: <span className="shop-cart-total">${commify(cartTotal)}</span></div>
         <div className="shop-cart-info-checkout">
           <div className="shop-checkout-button" onClick={handleCheckout}>Checkout</div>
           {/* <div className="shop-clear-button" onClick={handleView}>View</div> */}
@@ -77,7 +77,7 @@ export default function StoreInventories() {
               {router.locale === "en" ? inventory.name : inventory.nameVi}
             </div>
             <div className="shop-action-container">
-              <div className="shop-item-price">{commifyViet(inventory.price)} ₫</div>
+              <div className="shop-item-price">${commify(inventory.price)}</div>
               <div className="shop-add-to-cart-button" onClick={() => updateCart(inventory)}>Add to cart</div>
             </div>
           </div>

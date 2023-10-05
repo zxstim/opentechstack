@@ -114,7 +114,7 @@ export default function Home(props) {
               </Link>
             </div>
             <div style={stimButtonStyle}>
-              <Link href="https://stimpacks.com" style={{ textDecoration: "none"}}>
+              <a href="https://stimpacks.com" target="_blank" style={{ textDecoration: "none"}}>
                   <h3 style={stimHeadingStyle}>
                     <Image 
                       src="/stimpacks-logo.svg" 
@@ -126,7 +126,7 @@ export default function Home(props) {
                     {t("title31")}
                   </h3>
                   <p style={stimParagraphStyle}>{t("subtitle31")}</p>
-              </Link>
+              </a>
             </div>
           </div>
           <h2>{t("section-1")}</h2>
@@ -186,7 +186,7 @@ export default function Home(props) {
               </Link>
             </div>
           </div>
-          <h2>{t("section-3")}</h2>
+          {/* <h2>{t("section-3")}</h2>
           <div
             style={{
               display: "grid",
@@ -212,7 +212,7 @@ export default function Home(props) {
                 <p style={paragraphStyle}>{t("subtitle6")}</p>
               </Link>
             </div>
-          </div>
+          </div> */}
           <h2>{t("section-2")}</h2>
           <div
             style={{
@@ -245,12 +245,12 @@ export default function Home(props) {
                   <p style={paragraphStyle}>{t("subtitle19")}</p>
               </Link>
             </div>
-            <div style={buttonStyle}>
+            {/* <div style={buttonStyle}>
               <Link href="/playground" style={{ textDecoration: "none"}}>
                   <h3 style={headingStyle}>{t("title27")}</h3>
                   <p style={paragraphStyle}>{t("subtitle27")}</p>
               </Link>
-            </div>
+            </div> */}
             <div style={buttonStyle}>
               <Link href="/jobs" style={{ textDecoration: "none"}}>
                   <h3 style={headingStyle}>{t("title29")}</h3>
@@ -264,7 +264,7 @@ export default function Home(props) {
               </Link>
             </div>
             <div style={buttonStyle}>
-              <Link href="/playground" style={{ textDecoration: "none"}}>
+              <Link href="/events" style={{ textDecoration: "none"}}>
                   <h3 style={headingStyle}>{t("title18")}</h3>
                   <p style={paragraphStyle}>{t("subtitle18")}</p>
               </Link>

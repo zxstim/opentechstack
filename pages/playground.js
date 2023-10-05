@@ -4,15 +4,15 @@ import { useTranslation } from "next-i18next";
 import WalletManagement from "../components/PlaygroundToys/WalletManagement/WalletManagement";
 import EnsCheck from "../components/PlaygroundToys/WalletManagement/EnsCheck";
 import AppFooter from "../components/AppFooter/AppFooter";
-import { WagmiConfig, createClient, configureChains, mainnet } from 'wagmi'
+// import { WagmiConfig, createClient, configureChains, mainnet } from 'wagmi'
  
-import { alchemyProvider } from 'wagmi/providers/alchemy'
-import { publicProvider } from 'wagmi/providers/public'
+// import { alchemyProvider } from 'wagmi/providers/alchemy'
+// import { publicProvider } from 'wagmi/providers/public'
  
-import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
-import { InjectedConnector } from 'wagmi/connectors/injected'
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
-import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
+// import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
+// import { InjectedConnector } from 'wagmi/connectors/injected'
+// import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
+// import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 
 import LanguageSelector from "../components/LanguageSelector/LanguageSelector";
 import NavigationGroup from "../components/NavigationGroup/NavigationGroup";
@@ -22,33 +22,33 @@ const { chains, provider, webSocketProvider } = configureChains(
   [publicProvider()],
 )
 // Set up client
-const client = createClient({
-  autoConnect: true,
-  connectors: [
-    new MetaMaskConnector({ chains }),
-    new CoinbaseWalletConnector({
-      chains,
-      options: {
-        appName: 'wagmi',
-      },
-    }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        qrcode: true,
-      },
-    }),
-    new InjectedConnector({
-      chains,
-      options: {
-        name: 'Injected',
-        shimDisconnect: true,
-      },
-    }),
-  ],
-  provider,
-  webSocketProvider,
-})
+// const client = createClient({
+//   autoConnect: true,
+//   connectors: [
+//     new MetaMaskConnector({ chains }),
+//     new CoinbaseWalletConnector({
+//       chains,
+//       options: {
+//         appName: 'wagmi',
+//       },
+//     }),
+//     new WalletConnectConnector({
+//       chains,
+//       options: {
+//         qrcode: true,
+//       },
+//     }),
+//     new InjectedConnector({
+//       chains,
+//       options: {
+//         name: 'Injected',
+//         shimDisconnect: true,
+//       },
+//     }),
+//   ],
+//   provider,
+//   webSocketProvider,
+// })
 
 export default function Playground(props) {
   const { t } = useTranslation("playground");
@@ -75,7 +75,7 @@ export default function Playground(props) {
   return (
     <>
       <Header content={headerContent} />
-      <WagmiConfig client={client}>
+      {/* <WagmiConfig client={client}> */}
         <div className="App">
           <div className="markdown-body">
             <h1 id="top">{t("title")}</h1>
@@ -89,7 +89,7 @@ export default function Playground(props) {
             <AppFooter />
           </div>
         </div>
-      </WagmiConfig>
+      {/* </WagmiConfig> */}
     </>
   );
 }

@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Header from "../../../components/Header/Header";
+import Header from "../../../../components/Header/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import { fetchStrapiAPI } from "../../../lib/api";
-import AppFooter from "../../../components/AppFooter/AppFooter";
-import LanguageSelector from "../../../components/LanguageSelector/LanguageSelector";
-import NavigationGroup from "../../../components/NavigationGroup/NavigationGroup";
+import { fetchStrapiAPI } from "../../../../lib/api";
+import AppFooter from "../../../../components/AppFooter/AppFooter";
+import LanguageSelector from "../../../../components/LanguageSelector/LanguageSelector";
+import NavigationGroup from "../../../../components/NavigationGroup/NavigationGroup";
 import InvestorInfo from "../../../components/InvestorList/InvestorInfo/InvestorInfo";
 
 export default function InvestorInfoPage({ investor }) {

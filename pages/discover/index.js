@@ -95,6 +95,11 @@ export default function Discover(props) {
       name: `${t("title11")}`,
       slug: "infrastructure-projects",
     },
+    {
+      id: 12,
+      name: `${t("title12")}`,
+      slug: "investors",
+    }
   ]
 
 
